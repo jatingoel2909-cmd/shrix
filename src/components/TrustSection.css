@@ -1,0 +1,32 @@
+.trust-section {
+  padding: 35px 7%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  background: var(--black);
+}
+
+.trust-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 26px;
+  text-align: center;
+}
+
+.trust-card h3 {
+  color: var(--gold);
+  font-size: 32px;
+  margin: 0;
+}
+
+.trust-card p {
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+@media (max-width: 850px) {
+  .trust-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

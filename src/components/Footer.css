@@ -1,0 +1,25 @@
+.footer {
+  text-align: center;
+  padding: 60px 7%;
+  background: #050505;
+  border-top: 1px solid var(--border);
+}
+
+.footer img {
+  height: 70px;
+  width: 150px;
+  object-fit: contain;
+}
+
+.footer h3 {
+  color: var(--gold);
+  margin: 16px 0 8px;
+}
+
+.footer p {
+  color: var(--muted);
+}
+
+.footer small {
+  color: #777;
+}
