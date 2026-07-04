@@ -7,10 +7,10 @@ function CalculatorGrid() {
     { icon: "🏦", title: "FD Calculator", desc: "Calculate fixed deposit maturity value.", path: "/fd-calculator" },
     { icon: "💳", title: "EMI Calculator", desc: "Plan loan EMI and repayment.", path: "/emi-calculator" },
     { icon: "💰", title: "PPF Calculator", desc: "Estimate long-term PPF growth.", path: "/ppf-calculator" },
-    { icon: "📊", title: "CAGR Calculator", desc: "Measure annualized investment return." },
-    { icon: "🎯", title: "Goal Planner", desc: "Plan financial goals with clarity." },
-    { icon: "🏖️", title: "Retirement", desc: "Estimate retirement corpus needs." },
-    { icon: "🔁", title: "SWP Calculator", desc: "Plan systematic withdrawals." },
+    { icon: "📊", title: "CAGR Calculator", desc: "Measure annualized investment return.", path: "/cagr-calculator" },
+    { icon: "💵", title: "Lumpsum Calculator", desc: "Project one-time investment growth.", path: "/lumpsum-calculator" },
+    { icon: "🏖️", title: "RD Calculator", desc: "Calculate recurring deposit maturity.", path: "/rd-calculator" },
+    { icon: "🔁", title: "SWP Calculator", desc: "Plan systematic withdrawals.", path: "/swp-calculator" },
   ];
 
   return (
