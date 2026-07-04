@@ -3,6 +3,7 @@ function Hero() {
     <section className="shrix-hero">
       <div className="shrix-hero-left">
         <p className="shrix-badge">India’s Smart Financial Platform</p>
+        <p className="shrix-hero-welcome">Welcome to Shrix</p>
 
         <h1>
           Grow Beyond <span>Numbers.</span>

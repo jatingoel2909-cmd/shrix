@@ -1,4 +1,4 @@
-import logo from "../assets/shrix-logo-navbar.png";
+import logo from "../assets/shrix-icon.png";
 import "./Navbar.css";
 
 function Navbar() {

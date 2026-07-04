@@ -108,7 +108,15 @@ body {
   padding: 12px 22px;
   border-radius: 999px;
   font-weight: 900;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
+}
+
+.shrix-hero-welcome {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 20px;
+  letter-spacing: 0.3px;
 }
 
 .shrix-hero h1 {
@@ -295,21 +303,51 @@ body {
 }
 
 .shrix-footer img {
-  width: 120px;
-  height: 80px;
+  width: auto;
+  height: 108px;
   object-fit: contain;
-}
-
-.shrix-footer h3 {
-  color: #d4af37;
 }
 
 .shrix-footer p {
   color: #b8b8b8;
+  margin: 18px 0 0;
+}
+
+.shrix-footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.shrix-footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 12px;
+  color: #d4af37;
+  transition: 0.25s ease;
+}
+
+.shrix-footer-social a:hover {
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.08);
+  transform: translateY(-2px);
+}
+
+.shrix-footer-social svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .shrix-footer small {
   color: #777777;
+  display: block;
+  margin-top: 22px;
 }
 
 @media (max-width: 950px) {
