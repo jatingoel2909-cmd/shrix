@@ -3,39 +3,114 @@ import InfoPageLayout from "../components/InfoPageLayout";
 import Footer from "../components/Footer";
 import "../styles/global.css";
 
+const principles = [
+  "Clarity over complexity — every tool should make finance easier to understand.",
+  "Education first — we explain concepts, not push products.",
+  "Built for India — calculators and content reflect how Indians save, borrow, and plan.",
+  "Transparency — no hidden agendas, no exaggerated claims.",
+  "Respect for your decisions — we inform; you choose.",
+];
+
+const roadmap = [
+  "Expanded calculator library covering more Indian financial scenarios.",
+  "Structured learning paths aligned to life stages and financial goals.",
+  "AI-powered educational tools for guided explanations and planning.",
+  "Richer content on tax, salary, retirement, and wealth planning.",
+  "A platform that grows with you — from first SIP to retirement corpus.",
+];
+
 function AboutPage() {
   return (
     <div className="shrix-app">
       <Navbar />
       <InfoPageLayout
         label="About Shrix"
-        title="Built for Financial Clarity"
-        subtitle="Shrix helps Indian users Grow Beyond Numbers with premium calculators and educational financial tools."
+        title="Financial Clarity for Every Indian"
+        subtitle="Premium calculators and educational tools designed to help you understand money — not overwhelm you with it."
       >
-        <p className="shrix-info-copy">
-          Shrix is a premium financial platform designed for Indian investors,
-          professionals, and families who want clear answers without complexity.
-          We focus on practical tools that make SIP, loans, deposits, retirement,
-          tax planning, and wealth decisions easier to understand.
-        </p>
-        <p className="shrix-info-copy">
-          Our calculators are built to be accurate, responsive, and easy to use.
-          Whether you are planning a monthly SIP, estimating EMI, evaluating FD or
-          PPF returns, or preparing for retirement, Shrix gives you instant clarity
-          in a clean black-and-gold experience.
-        </p>
-        <p className="shrix-info-copy">
-          Shrix is educational in nature. We help users learn how financial products
-          work, compare scenarios, and make informed decisions — not replace
-          professional financial, legal, or tax advice.
-        </p>
-        <article className="shrix-info-card">
+        <article className="shrix-info-card shrix-info-card--wide">
+          <h3>Who We Are</h3>
+          <p>
+            Shrix is a premium financial platform built for Indian users who want
+            clear, practical answers about money. We combine accurate calculators
+            with educational content so you can understand SIP, loans, deposits,
+            retirement, tax planning, and everyday financial decisions — without
+            wading through jargon or noise.
+          </p>
+        </article>
+
+        <div className="shrix-info-grid">
+          <article className="shrix-info-card">
+            <h3>Our Mission</h3>
+            <p>
+              To make financial planning accessible and understandable for every
+              Indian — whether you are saving your first ₹500, planning a home
+              loan, or preparing for retirement. We believe informed decisions
+              start with clarity, not complexity.
+            </p>
+          </article>
+
+          <article className="shrix-info-card">
+            <h3>Our Vision</h3>
+            <p>
+              A India where every person can confidently navigate their financial
+              journey — from first salary to golden years — with tools and
+              education that respect their goals, context, and choices.
+            </p>
+          </article>
+        </div>
+
+        <article className="shrix-info-card shrix-info-card--wide">
+          <h3>What Makes Us Different</h3>
+          <p>
+            Shrix is not another generic finance site. We focus on the products,
+            scenarios, and questions that matter to Indian users — PPF, EPF, NPS,
+            FD, EMI, SIP, gratuity, and more. Our black-and-gold experience is
+            designed to feel premium and trustworthy, with calculators that are
+            fast, responsive, and easy to use on any device.
+          </p>
+          <p className="shrix-info-card__follow">
+            We do not sell financial products, offer personalised advisory
+            services, or claim regulated credentials. Shrix is an educational
+            platform — here to help you learn, compare scenarios, and think
+            clearly about your money.
+          </p>
+        </article>
+
+        <article className="shrix-info-card shrix-info-card--wide">
+          <h3>Our Principles</h3>
+          <ul className="shrix-info-list">
+            {principles.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </article>
+
+        <article className="shrix-info-card shrix-info-card--wide shrix-info-card--highlight">
           <h3>Grow Beyond Numbers</h3>
           <p>
-            That is more than a tagline. It reflects our belief that smart financial
-            planning is about understanding the story behind the numbers — and using
-            that understanding to build confidence over time.
+            That is more than a tagline — it is how we think about financial
+            planning. Numbers matter, but understanding what they mean matters
+            more. Shrix helps you see the story behind every calculation: how
+            compounding builds wealth, how EMI affects cash flow, how retirement
+            corpus targets take shape over time.
           </p>
+          <p className="shrix-info-card__follow">
+            When you Grow Beyond Numbers, you move from guessing to knowing —
+            and from knowing to confident, informed action.
+          </p>
+        </article>
+
+        <article className="shrix-info-card shrix-info-card--wide">
+          <h3>Future Roadmap</h3>
+          <p>
+            Shrix is actively evolving. Here is what we are working toward:
+          </p>
+          <ul className="shrix-info-list">
+            {roadmap.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </article>
       </InfoPageLayout>
       <Footer />

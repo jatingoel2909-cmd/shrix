@@ -3,30 +3,66 @@ import InfoPageLayout from "../components/InfoPageLayout";
 import Footer from "../components/Footer";
 import "../styles/global.css";
 
-const topics = [
+const lifeStages = [
   {
-    title: "SIP Basics",
-    text: "Understand how systematic investment plans work, how monthly investing builds wealth, and how to estimate long-term returns with clarity.",
+    title: "Kids & Teens",
+    text: "Build early money habits with simple, age-appropriate concepts that make finance feel approachable.",
+    topics: ["Money basics", "Saving", "Needs vs wants", "Simple interest"],
   },
+  {
+    title: "Students",
+    text: "Prepare for financial independence with practical skills for everyday money decisions and first investments.",
+    topics: ["Banking", "UPI", "Budgeting", "Credit score", "First SIP"],
+  },
+  {
+    title: "Young Professionals",
+    text: "Turn your first salary into a strong foundation with structured planning for savings, protection, and growth.",
+    topics: [
+      "Salary planning",
+      "Emergency fund",
+      "SIP",
+      "Tax saving",
+      "Insurance",
+    ],
+  },
+  {
+    title: "Families",
+    text: "Balance multiple goals — home, education, health, and retirement — with clarity and confidence.",
+    topics: [
+      "Home loan",
+      "Child education",
+      "Retirement",
+      "Health insurance",
+      "Goal planning",
+    ],
+  },
+  {
+    title: "50+ & Retirement",
+    text: "Understand post-work income, corpus planning, and how to manage wealth through retirement years.",
+    topics: ["EPF", "NPS", "Gratuity", "SWP", "Pension", "Passive income"],
+  },
+];
+
+const learningPaths = [
   {
     title: "Investing Basics",
-    text: "Learn core ideas like risk, return, compounding, asset allocation, and how to evaluate investment choices with confidence.",
+    text: "Learn compounding, risk and return, SIP, lumpsum, and how to evaluate investment choices step by step.",
   },
   {
-    title: "FD, PPF, EPF & NPS",
-    text: "Explore how popular Indian savings and retirement products work, including fixed deposits, PPF, EPF, and National Pension System.",
-  },
-  {
-    title: "Loan & EMI Education",
-    text: "Understand borrowing costs, EMI structure, interest impact, and how to compare loan options before making financial decisions.",
+    title: "Loans & EMI",
+    text: "Understand borrowing costs, EMI structure, prepayment impact, and how to compare loan options wisely.",
   },
   {
     title: "Tax & Salary Planning",
-    text: "Build awareness around salary components, deductions, tax planning concepts, and how financial choices affect take-home outcomes.",
+    text: "Explore salary components, deductions, tax-saving concepts, and how choices affect your take-home pay.",
   },
   {
     title: "Retirement Planning",
-    text: "Learn how to estimate retirement needs, plan long-term corpus targets, and use calculators to prepare for life after work.",
+    text: "Estimate retirement needs, plan long-term corpus targets, and explore EPF, NPS, and SWP concepts.",
+  },
+  {
+    title: "Financial Calculators",
+    text: "Use Shrix calculators to model SIP, EMI, FD, PPF, and goal scenarios with instant, clear results.",
   },
 ];
 
@@ -36,17 +72,45 @@ function LearnPage() {
       <Navbar />
       <InfoPageLayout
         label="Learn"
-        title="Financial Learning for Indian Investors"
-        subtitle="Clear, practical education to help you understand money, investments, loans, and long-term planning."
+        title="Learn Money Your Way"
+        subtitle="Structured education for every life stage — from first savings to retirement planning, built for Indian users."
       >
-        <div className="shrix-info-grid">
-          {topics.map((topic) => (
-            <article className="shrix-info-card" key={topic.title}>
-              <h3>{topic.title}</h3>
-              <p>{topic.text}</p>
-            </article>
-          ))}
-        </div>
+        <section className="shrix-info-section">
+          <h2 className="shrix-info-section__title">Learn by Life Stage</h2>
+          <p className="shrix-info-section__intro">
+            Pick the stage that fits you today. Each path covers the topics that
+            matter most at that point in life.
+          </p>
+          <div className="shrix-info-grid shrix-info-grid--wide">
+            {lifeStages.map((stage) => (
+              <article className="shrix-info-card" key={stage.title}>
+                <h3>{stage.title}</h3>
+                <p>{stage.text}</p>
+                <ul className="shrix-info-tags">
+                  {stage.topics.map((topic) => (
+                    <li key={topic}>{topic}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="shrix-info-section">
+          <h2 className="shrix-info-section__title">Learning Paths</h2>
+          <p className="shrix-info-section__intro">
+            Follow focused tracks to build confidence in investing, borrowing,
+            taxes, retirement, and using calculators effectively.
+          </p>
+          <div className="shrix-info-grid">
+            {learningPaths.map((path) => (
+              <article className="shrix-info-card" key={path.title}>
+                <h3>{path.title}</h3>
+                <p>{path.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
       </InfoPageLayout>
       <Footer />
     </div>

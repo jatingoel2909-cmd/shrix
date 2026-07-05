@@ -21,7 +21,7 @@ function Navbar() {
       <nav className="shrix-nav-links">
         <Link to="/calculators">Calculators</Link>
         <Link to="/learn">Learn</Link>
-        <Link to="/ai-tools">AI Tools</Link>
+        <Link to="/ai-tools">AI</Link>
         <Link to="/about">About</Link>
         <a href="#contact" onClick={handleContactClick}>
           Contact
