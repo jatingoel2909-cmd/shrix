@@ -10,21 +10,22 @@
   top: 0;
   z-index: 10;
 }
-
 .shrix-brand {
+  height: 96px;
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  overflow: visible;
 }
 
 .shrix-brand img {
-  display: block;
+  height: 72px;
   width: auto;
-  height: 65px;
-  max-width: 80px;
+  max-width: none;
   object-fit: contain;
   object-position: left center;
+  display: block;
 }
+
 
 .shrix-nav-links {
   display: flex;
@@ -66,7 +67,7 @@
 
   .shrix-brand img {
     height: 58px;
-    max-width: 72px;
+    width: auto;
   }
 
   .shrix-nav-links,
@@ -78,6 +79,34 @@
 @media (max-width: 620px) {
   .shrix-brand img {
     height: 52px;
-    max-width: 64px;
+    width: auto;
+  }
+}
+
+  .shrix-nav-links,
+  .shrix-nav-btn {
+    display: none;
+  }
+  
+@media (max-width: 950px) {
+  .shrix-navbar {
+    height: 88px;
+  }
+
+  .shrix-brand img {
+    height: 58px;
+    width: auto;
+  }
+
+  .shrix-nav-links,
+  .shrix-nav-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .shrix-brand img {
+    height: 52px;
+    width: auto;
   }
 }

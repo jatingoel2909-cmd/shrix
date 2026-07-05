@@ -303,9 +303,11 @@ body {
 }
 
 .shrix-footer img {
+  height: 140px;
   width: auto;
-  height: 108px;
   object-fit: contain;
+  display: block;
+  margin: 0 auto 18px;
 }
 
 .shrix-footer p {
