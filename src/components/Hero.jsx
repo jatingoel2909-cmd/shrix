@@ -12,7 +12,8 @@ function Hero() {
         <p className="shrix-hero-welcome">Welcome to Shrix</p>
 
         <h1>
-          Grow Beyond <span>Numbers.</span>
+          <span className="shrix-hero-headline">Grow Beyond</span>{" "}
+          <span>Numbers.</span>
         </h1>
 
         <p className="shrix-hero-text">

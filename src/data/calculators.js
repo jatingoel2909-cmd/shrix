@@ -13,6 +13,12 @@ export const ALL_CALCULATORS = [
   { icon: "🎁", title: "Gratuity Calculator", desc: "Estimate gratuity payout after service.", path: "/gratuity-calculator" },
   { icon: "🏛️", title: "EPF Calculator", desc: "Project your EPF retirement corpus.", path: "/epf-calculator" },
   { icon: "🛡️", title: "NPS Calculator", desc: "Plan National Pension System growth.", path: "/nps-calculator" },
+  { icon: "🏠", title: "Home Loan Eligibility Calculator", desc: "Estimate home loan you may qualify for.", path: "/home-loan-eligibility-calculator" },
+  { icon: "💸", title: "Loan Prepayment Calculator", desc: "See interest saved from loan prepayment.", path: "/loan-prepayment-calculator" },
+  { icon: "🧾", title: "GST Calculator", desc: "Add or remove GST from any amount.", path: "/gst-calculator" },
+  { icon: "📋", title: "Income Tax Calculator", desc: "Approximate Old and New regime tax.", path: "/income-tax-calculator" },
+  { icon: "🏢", title: "HRA Calculator", desc: "Calculate HRA exemption and taxable portion.", path: "/hra-calculator" },
+  { icon: "📐", title: "Compound Interest Calculator", desc: "Project growth with compounding frequency.", path: "/compound-interest-calculator" },
 ];
 
 export const POPULAR_CALCULATOR_TITLES = [

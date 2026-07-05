@@ -91,7 +91,7 @@ body {
 
 .shrix-hero {
   min-height: 620px;
-  padding: 70px max(32px, calc((100vw - 1280px) / 2));
+  padding: 100px max(32px, calc((100vw - 1280px) / 2));
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 70px;
@@ -117,7 +117,7 @@ body {
 
 .shrix-hero-welcome {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 800;
   margin: 0 0 24px;
   letter-spacing: 0.2px;
@@ -125,23 +125,23 @@ body {
 }
 
 .shrix-hero h1 {
-  font-size: clamp(48px, 11vw, 64px);
+  font-size: clamp(72px, 7vw, 96px);
   font-weight: 900;
-  line-height: 1.02;
-  margin: 0 0 22px;
-  letter-spacing: -2px;
+  line-height: 0.95;
+  margin: 0 0 36px;
+  letter-spacing: -3px;
 }
 
-.shrix-hero h1 span {
+.shrix-hero h1 span:not(.shrix-hero-headline) {
   color: #d4af37;
 }
 
 .shrix-hero-text {
   max-width: 620px;
   color: rgba(255, 255, 255, 0.85);
-  font-size: 18px;
-  line-height: 1.7;
-  margin: 0;
+  font-size: 22px;
+  line-height: 1.8;
+  margin: 0 0 42px;
 }
 
 .shrix-hero-actions {
@@ -359,35 +359,6 @@ body {
   margin-top: 22px;
 }
 
-@media (min-width: 1200px) {
-  .shrix-hero {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  .shrix-hero-welcome {
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 24px;
-  }
-
-  .shrix-hero h1 {
-    font-size: clamp(72px, 7vw, 96px);
-    font-weight: 900;
-    line-height: 0.95;
-    letter-spacing: -3px;
-    margin: 0 0 36px;
-  }
-
-  .shrix-hero-text {
-    max-width: 620px;
-    font-size: 22px;
-    line-height: 1.8;
-    margin-bottom: 42px;
-    color: rgba(255, 255, 255, 0.85);
-  }
-}
-
 @media (max-width: 950px) {
   .shrix-navbar {
     height: 88px;
@@ -412,9 +383,22 @@ body {
     margin: 0 auto;
   }
 
+  .shrix-hero-welcome {
+    font-size: 30px;
+  }
+
+  .shrix-hero h1 {
+    font-size: clamp(48px, 11vw, 64px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+  }
+
   .shrix-hero-text {
     margin-left: auto;
     margin-right: auto;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 0;
   }
 
   .shrix-hero-actions {
@@ -428,6 +412,29 @@ body {
   .shrix-trust,
   .shrix-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .shrix-hero-welcome {
+    font-size: 28px;
+  }
+
+  .shrix-hero h1 {
+    font-size: clamp(40px, 9vw, 56px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    max-width: 100%;
+  }
+
+  .shrix-hero-headline {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .shrix-hero-text {
+    font-size: 18px;
+    line-height: 1.7;
   }
 }
 

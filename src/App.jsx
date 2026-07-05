@@ -18,6 +18,12 @@ import LearnPage from "./pages/LearnPage";
 import AiToolsPage from "./pages/AiToolsPage";
 import AboutPage from "./pages/AboutPage";
 import RetirementCalculatorPage from "./pages/RetirementCalculatorPage";
+import HomeLoanEligibilityCalculatorPage from "./pages/HomeLoanEligibilityCalculatorPage";
+import LoanPrepaymentCalculatorPage from "./pages/LoanPrepaymentCalculatorPage";
+import GstCalculatorPage from "./pages/GstCalculatorPage";
+import IncomeTaxCalculatorPage from "./pages/IncomeTaxCalculatorPage";
+import HraCalculatorPage from "./pages/HraCalculatorPage";
+import CompoundInterestCalculatorPage from "./pages/CompoundInterestCalculatorPage";
 
 function App() {
   return (
@@ -42,6 +48,12 @@ function App() {
         <Route path="/nps-calculator" element={<NpsCalculatorPage />} />
         <Route path="/goal-planner" element={<GoalPlannerCalculatorPage />} />
         <Route path="/retirement-calculator" element={<RetirementCalculatorPage />} />
+        <Route path="/home-loan-eligibility-calculator" element={<HomeLoanEligibilityCalculatorPage />} />
+        <Route path="/loan-prepayment-calculator" element={<LoanPrepaymentCalculatorPage />} />
+        <Route path="/gst-calculator" element={<GstCalculatorPage />} />
+        <Route path="/income-tax-calculator" element={<IncomeTaxCalculatorPage />} />
+        <Route path="/hra-calculator" element={<HraCalculatorPage />} />
+        <Route path="/compound-interest-calculator" element={<CompoundInterestCalculatorPage />} />
       </Routes>
     </BrowserRouter>
   );
