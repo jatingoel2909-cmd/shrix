@@ -62,7 +62,7 @@ const learningPaths = [
   },
   {
     title: "Financial Calculators",
-    text: "Use Shrix calculators to model SIP, EMI, FD, PPF, and goal scenarios with instant, clear results.",
+    text: "Use FOINWI calculators to model SIP, EMI, FD, PPF, and goal scenarios with instant, clear results.",
   },
 ];
 

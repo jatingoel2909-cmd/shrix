@@ -1,4 +1,4 @@
-import logo from "../assets/shrix-logo.png";
+import BrandWordmark from "./BrandWordmark";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navigateToHomeSection } from "../utils/homeNavigation";
 import "./Navbar.css";
@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <header className="shrix-navbar">
       <div className="shrix-brand">
-        <img src={logo} alt="Shrix logo" />
+        <BrandWordmark linked />
       </div>
 
       <nav className="shrix-nav-links">

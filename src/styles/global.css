@@ -54,6 +54,29 @@ body {
   object-position: left center;
 }
 
+.foinwi-wordmark-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.foinwi-wordmark {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 0%, #d4af37 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.foinwi-wordmark--footer {
+  font-size: 38px;
+  letter-spacing: 5px;
+  margin-bottom: 6px;
+}
+
 .shrix-nav-links {
   display: flex;
   gap: 42px;
@@ -359,6 +382,11 @@ body {
   margin-top: 22px;
 }
 
+.shrix-footer .foinwi-wordmark--footer {
+  display: block;
+  margin: 0 auto 18px;
+}
+
 @media (max-width: 950px) {
   .shrix-navbar {
     height: 88px;
@@ -367,6 +395,15 @@ body {
   .shrix-brand img {
     height: 72px;
     max-width: 200px;
+  }
+
+  .foinwi-wordmark {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  .foinwi-wordmark--footer {
+    font-size: 32px;
   }
 
   .shrix-nav-links,
@@ -451,6 +488,15 @@ body {
   .shrix-brand img {
     height: 60px;
     max-width: 160px;
+  }
+
+  .foinwi-wordmark {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+
+  .foinwi-wordmark--footer {
+    font-size: 28px;
   }
 }
 

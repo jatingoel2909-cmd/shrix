@@ -52,7 +52,7 @@ function AiToolsPage() {
       <Navbar />
       <InfoPageLayout
         label="AI Tools"
-        title="The Shrix AI Roadmap"
+        title="The FOINWI AI Roadmap"
         subtitle="Planned AI-powered tools to help you understand money decisions with clarity — built for education, not automation of advice."
         variant="alt"
       >

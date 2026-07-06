@@ -1,9 +1,9 @@
-import logo from "../assets/shrix-logo.png";
+import BrandWordmark from "./BrandWordmark";
 
 function Footer() {
   return (
     <footer className="shrix-footer" id="about">
-      <img src={logo} alt="Shrix icon" />
+      <BrandWordmark className="foinwi-wordmark--footer" />
       <p>Premium Financial Platform for Indian Investors.</p>
       <small id="contact">Educational purpose only. Not financial advice.</small>
     </footer>
