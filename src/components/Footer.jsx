@@ -5,9 +5,14 @@ function Footer() {
     <footer className="shrix-footer" id="about">
       <BrandWordmark className="foinwi-wordmark--footer" />
       <p>Premium Financial Platform for Indian Investors.</p>
-      <small id="contact">
-        FOINWI provides educational financial tools only. This is not financial advice.
-        Please consult a qualified financial advisor before making financial decisions.
+      <p className="shrix-footer__contact" id="contact">
+        For general queries, feedback, calculator issues, partnership requests, or
+        collaboration, contact us at{" "}
+        <a href="mailto:support@foinwi.com">support@foinwi.com</a>.
+      </p>
+      <small>
+        FOINWI provides educational financial tools only. We do not provide
+        personalized investment, tax, loan, legal, or financial advice.
       </small>
     </footer>
   );

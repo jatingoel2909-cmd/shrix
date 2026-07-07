@@ -380,6 +380,23 @@ body {
   margin: 18px 0 0;
 }
 
+.shrix-footer__contact {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.shrix-footer__contact a {
+  color: var(--fw-accent);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.shrix-footer__contact a:hover {
+  color: var(--fw-accent-bright);
+}
+
 .shrix-footer-social {
   display: flex;
   justify-content: center;
