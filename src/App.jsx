@@ -25,6 +25,9 @@ import GstCalculatorPage from "./pages/GstCalculatorPage";
 import IncomeTaxCalculatorPage from "./pages/IncomeTaxCalculatorPage";
 import HraCalculatorPage from "./pages/HraCalculatorPage";
 import CompoundInterestCalculatorPage from "./pages/CompoundInterestCalculatorPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
+import DisclaimerPage from "./pages/DisclaimerPage";
 
 function App() {
   return (
@@ -36,6 +39,9 @@ function App() {
         <Route path="/learn" element={<LearnPage />} />
         <Route path="/ai-tools" element={<AiToolsPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
+        <Route path="/disclaimer" element={<DisclaimerPage />} />
         <Route path="/sip-calculator" element={<SipCalculatorPage />} />
         <Route path="/emi-calculator" element={<EmiCalculatorPage />} />
         <Route path="/fd-calculator" element={<FdCalculatorPage />} />

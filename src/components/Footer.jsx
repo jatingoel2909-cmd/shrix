@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BrandWordmark from "./BrandWordmark";
 
 function Footer() {
@@ -5,6 +6,12 @@ function Footer() {
     <footer className="shrix-footer" id="about">
       <BrandWordmark className="foinwi-wordmark--footer" />
       <p>Premium Financial Platform for Indian Investors.</p>
+      <nav className="shrix-footer__links" aria-label="Footer links">
+        <Link to="/privacy-policy">Privacy Policy</Link>
+        <Link to="/terms-and-conditions">Terms & Conditions</Link>
+        <Link to="/disclaimer">Disclaimer</Link>
+        <a href="#contact">Contact</a>
+      </nav>
       <p className="shrix-footer__contact" id="contact">
         For general queries, feedback, calculator issues, partnership requests, or
         collaboration, contact us at{" "}

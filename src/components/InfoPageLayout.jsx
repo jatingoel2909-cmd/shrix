@@ -5,11 +5,14 @@ function InfoPageLayout({
   title,
   subtitle,
   variant = "default",
+  centered = false,
   children,
 }) {
   return (
     <section
-      className={`shrix-info-page${variant === "alt" ? " shrix-info-page--alt" : ""}`}
+      className={`shrix-info-page${variant === "alt" ? " shrix-info-page--alt" : ""}${
+        centered ? " shrix-info-page--centered" : ""
+      }`}
     >
       <p className="shrix-section-label">{label}</p>
       <h1>{title}</h1>
