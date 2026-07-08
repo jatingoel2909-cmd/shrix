@@ -9,7 +9,7 @@ const pillars = [
   },
   {
     title: "Plan with AI",
-    text: "Upcoming AI tools will help explain results, compare options, and guide users toward smarter financial planning.",
+    text: "Upcoming AI tools will help explain results, compare options, and support clearer financial learning.",
   },
   {
     title: "Grow",
@@ -23,7 +23,7 @@ function FourPillarsSection() {
       <p className="shrix-section-label">Our Approach</p>
       <h2>Calculate. Learn. Plan with AI. Grow.</h2>
       <p className="shrix-home-section__subtitle">
-        FOINWI helps India calculate, learn, and plan smarter financial decisions.
+        FOINWI helps users calculate, learn, and explore financial concepts with clarity.
       </p>
       <div className="shrix-home-grid shrix-home-grid--4">
         {pillars.map((pillar) => (

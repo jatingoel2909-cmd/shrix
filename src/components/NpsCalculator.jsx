@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import InputField from "./ui/InputField";
 import ResultCard from "./ui/ResultCard";
@@ -51,6 +50,7 @@ function NpsCalculator({
       showHeader={showHeader}
       variant="alt"
       className={className}
+      calculatorId="/nps-calculator"
       form={
         <>
           <CurrencyInput
@@ -105,12 +105,6 @@ function NpsCalculator({
             value={formatCurrency(estimatedPension)}
           />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="Corpus = Monthly SIP FV. Pension ≈ 40% of corpus × 6% annuity / 12."
-          explanation="Assumes 40% of NPS corpus is used for annuity at ~6% annual payout rate."
-        />
       }
     />
   );

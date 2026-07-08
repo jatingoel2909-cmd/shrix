@@ -79,17 +79,33 @@
   line-height: 1.6;
 }
 
-.shrix-journey-card__duration {
-  display: inline-block;
+.shrix-journey-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 16px 0 18px;
+}
+
+.shrix-journey-card__duration,
+.shrix-journey-card__difficulty {
+  display: inline-block;
   padding: 5px 10px;
   border-radius: 999px;
-  border: 1px solid var(--fw-border);
-  color: var(--fw-accent);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.3px;
+}
+
+.shrix-journey-card__duration {
+  border: 1px solid var(--fw-border);
+  color: var(--fw-accent);
   background: rgba(212, 175, 55, 0.08);
+}
+
+.shrix-journey-card__difficulty {
+  border: 1px solid rgba(47, 61, 79, 0.15);
+  color: var(--fw-text-secondary);
+  background: rgba(255, 252, 247, 0.9);
 }
 
 .shrix-journey-card__cta {

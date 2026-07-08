@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import InputField from "./ui/InputField";
 import ResultCard from "./ui/ResultCard";
@@ -58,6 +57,7 @@ function RetirementCalculator({
       showHeader={showHeader}
       variant="alt"
       className={className}
+      calculatorId="/retirement-calculator"
       form={
         <>
           <InputField
@@ -127,12 +127,6 @@ function RetirementCalculator({
             value={formatCurrency(monthlySipRequired)}
           />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="Corpus Needed = Inflated Monthly Expense × 12 × 25. SIP closes the shortfall via SIP FV."
-          explanation="Uses the 25x annual expense rule (4% withdrawal) and inflates current expenses until retirement."
-        />
       }
     />
   );

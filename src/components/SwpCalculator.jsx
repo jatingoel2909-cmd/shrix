@@ -62,6 +62,7 @@ function SwpCalculator({
       showHeader={showHeader}
       variant="default"
       className={className}
+      calculatorId="/swp-calculator"
       form={
         <>
           <CurrencyInput

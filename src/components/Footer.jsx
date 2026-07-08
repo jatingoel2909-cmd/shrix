@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="shrix-footer" id="about">
       <BrandWordmark className="foinwi-wordmark--footer" />
-      <p>Premium Financial Platform for Indian Investors.</p>
+      <p>Premium educational finance platform for Indian users.</p>
       <nav className="shrix-footer__links" aria-label="Footer links">
         <Link to="/privacy-policy">Privacy Policy</Link>
         <Link to="/terms-and-conditions">Terms & Conditions</Link>

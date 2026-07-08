@@ -1,3 +1,5 @@
+import CalculatorResultSupport from "./CalculatorResultSupport";
+import { getCalculatorInsights } from "../../data/calculatorInsights";
 import "./calculator-ui.css";
 
 function CalculatorLayout({
@@ -7,10 +9,13 @@ function CalculatorLayout({
   showHeader = true,
   variant = "default",
   className = "",
+  calculatorId,
   form,
   results,
   formula,
 }) {
+  const insights = calculatorId ? getCalculatorInsights(calculatorId) : null;
+
   return (
     <section
       className={`calc-layout calc-layout--${variant}${className ? ` ${className}` : ""}`}
@@ -28,6 +33,16 @@ function CalculatorLayout({
         <div className="calc-layout__results">{results}</div>
         {formula}
       </div>
+
+      {insights ? (
+        <CalculatorResultSupport {...insights} />
+      ) : (
+        <p className="calc-layout__disclaimer">
+          Results are illustrative estimates based on your inputs and assumptions. For
+          educational purposes only. Not financial, tax, investment, or loan advice.
+          Consult qualified professionals before making financial decisions.
+        </p>
+      )}
     </section>
   );
 }

@@ -45,6 +45,7 @@ function PpfCalculator({
       showHeader={showHeader}
       variant="alt"
       className={className}
+      calculatorId="/ppf-calculator"
       form={
         <>
           <CurrencyInput

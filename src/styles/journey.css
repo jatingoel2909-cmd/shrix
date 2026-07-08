@@ -1,17 +1,16 @@
-.shrix-journey-hero {
-  padding: 100px max(32px, calc((100vw - 1280px) / 2)) 64px;
+.shrix-mission-hero {
+  padding: 100px max(32px, calc((100vw - 1280px) / 2)) 56px;
   background: var(--fw-bg-hero);
   border-bottom: 1px solid var(--fw-border);
 }
 
-.shrix-journey-hero__inner {
-  max-width: 760px;
-  animation: shrix-journey-fade-up 0.65s ease both;
+.shrix-mission-hero__inner {
+  max-width: 920px;
 }
 
-.shrix-journey-hero__back {
+.shrix-mission-hero__back {
   display: inline-block;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   color: var(--fw-text-muted);
   font-size: 14px;
   font-weight: 700;
@@ -19,61 +18,112 @@
   transition: color 0.2s ease;
 }
 
-.shrix-journey-hero__back:hover {
+.shrix-mission-hero__back:hover {
   color: var(--fw-accent);
 }
 
-.shrix-journey-hero__badge {
+.shrix-mission-hero__top {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.shrix-mission-hero__icon {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 72px;
-  height: 72px;
-  margin-bottom: 20px;
-  border-radius: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 22px;
   background: linear-gradient(145deg, rgba(255, 250, 245, 0.95) 0%, rgba(243, 232, 216, 0.9) 100%);
   border: 1px solid rgba(201, 162, 39, 0.4);
   box-shadow: var(--fw-shadow-card);
-  font-size: 36px;
+  font-size: 38px;
 }
 
-.shrix-journey-hero h1 {
-  margin: 10px 0 16px;
-  font-size: clamp(32px, 4vw, 48px);
+.shrix-mission-hero__meta h1 {
+  margin: 8px 0 12px;
+  font-size: clamp(32px, 4vw, 46px);
   line-height: 1.08;
   letter-spacing: -1px;
   color: var(--fw-text-primary);
 }
 
-.shrix-journey-hero__subtitle {
-  margin: 0 0 18px;
+.shrix-mission-hero__subtitle {
+  margin: 0 0 16px;
   color: var(--fw-text-secondary);
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.65;
   max-width: 640px;
 }
 
-.shrix-journey-hero__duration {
+.shrix-mission-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.shrix-mission-badge {
   display: inline-block;
   padding: 6px 12px;
   border-radius: 999px;
   border: 1px solid var(--fw-border-strong);
   color: var(--fw-accent);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.4px;
   text-transform: uppercase;
   background: rgba(212, 175, 55, 0.08);
 }
 
-.shrix-journey-page {
-  padding: 64px max(32px, calc((100vw - 1280px) / 2)) 100px;
-  background: var(--fw-bg-page);
-  display: grid;
-  gap: 40px;
+.shrix-mission-badge--difficulty {
+  border-color: rgba(47, 61, 79, 0.2);
+  color: var(--fw-text-secondary);
+  background: rgba(255, 252, 247, 0.9);
 }
 
-.shrix-journey-block {
+.shrix-mission-hero__start {
+  margin-top: 28px;
+  padding: 14px 26px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #d4af37, #c9a227);
+  color: var(--fw-text-on-accent);
+  font-size: 15px;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: var(--fw-shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.shrix-mission-hero__start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(61, 52, 40, 0.12);
+}
+
+.shrix-mission-page {
+  padding: 56px max(32px, calc((100vw - 1280px) / 2)) 100px;
+  background: var(--fw-bg-page);
+  display: grid;
+  gap: 32px;
+}
+
+.shrix-mission-block--brief {
+  background: linear-gradient(135deg, rgba(255, 250, 245, 0.95) 0%, rgba(243, 232, 216, 0.45) 100%);
+  border-color: rgba(201, 162, 39, 0.3);
+}
+
+.shrix-mission-block--brief p {
+  margin: 0;
+  color: var(--fw-text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 820px;
+}
+
+.shrix-mission-block {
   padding: 28px 30px;
   background: var(--fw-bg-surface);
   border: 1px solid var(--fw-border-strong);
@@ -81,37 +131,131 @@
   box-shadow: var(--fw-shadow-card);
 }
 
-.shrix-journey-block h2 {
-  margin: 0 0 14px;
+.shrix-mission-block h2 {
+  margin: 0;
   color: var(--fw-text-primary);
   font-size: clamp(22px, 2.5vw, 28px);
   letter-spacing: -0.4px;
 }
 
-.shrix-journey-block > p {
+.shrix-mission-block__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.shrix-mission-block__intro {
+  margin: 10px 0 20px;
+  color: var(--fw-text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.shrix-mission-progress__count {
+  color: var(--fw-accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.shrix-mission-track {
+  position: relative;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.shrix-mission-track__line {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(201, 162, 39, 0.45), rgba(201, 162, 39, 0.12));
+  z-index: 0;
+}
+
+.shrix-mission-track__steps {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: max(100%, 720px);
+  position: relative;
+  z-index: 1;
+}
+
+.shrix-mission-track__step {
+  flex: 1;
+  min-width: 140px;
+  max-width: 180px;
+  text-align: center;
+}
+
+.shrix-mission-track__dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  border: 2px solid rgba(201, 162, 39, 0.35);
+  background: var(--fw-bg-surface);
+  color: var(--fw-text-muted);
+  transition: 0.3s ease;
+}
+
+.shrix-mission-track__content strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--fw-text-primary);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.shrix-mission-track__content p {
   margin: 0;
   color: var(--fw-text-muted);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 11px;
+  line-height: 1.45;
 }
 
-.shrix-journey-block__intro {
-  margin-bottom: 20px !important;
+.shrix-mission-track__step--completed .shrix-mission-track__dot {
+  border-color: var(--fw-accent-bright);
+  background: linear-gradient(145deg, #fffaf5, #f0e4d2);
+  color: var(--fw-accent);
 }
 
-.shrix-journey-block--ai {
-  background: linear-gradient(135deg, rgba(255, 250, 245, 0.95) 0%, rgba(243, 232, 216, 0.55) 100%);
-  border-color: rgba(201, 162, 39, 0.35);
+.shrix-mission-track__step--current .shrix-mission-track__dot {
+  border-color: var(--fw-accent-bright);
+  background: linear-gradient(135deg, #d4af37, #c9a227);
+  color: var(--fw-text-on-accent);
+  box-shadow: 0 0 0 4px rgba(201, 162, 39, 0.18);
 }
 
-.shrix-journey-calc-grid {
+.shrix-mission-track__step--current .shrix-mission-track__content strong {
+  color: var(--fw-accent);
+}
+
+.shrix-mission-track__step--upcoming .shrix-mission-track__dot {
+  opacity: 0.75;
+}
+
+.shrix-mission-calc-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
-.shrix-journey-calc-card {
-  display: block;
+.shrix-mission-calc-card {
+  display: flex;
+  gap: 14px;
   padding: 18px 20px;
   border-radius: 16px;
   border: 1px solid var(--fw-border);
@@ -120,43 +264,78 @@
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.shrix-journey-calc-card:hover {
+.shrix-mission-calc-card:hover {
   transform: translateY(-3px);
   border-color: var(--fw-border-strong);
   box-shadow: var(--fw-shadow-soft);
 }
 
-.shrix-journey-calc-card h3 {
+.shrix-mission-calc-card__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  font-size: 22px;
+}
+
+.shrix-mission-calc-card h3 {
+  margin: 0 0 6px;
+  color: var(--fw-accent);
+  font-size: 16px;
+}
+
+.shrix-mission-calc-card p {
   margin: 0 0 8px;
-  color: var(--fw-accent);
-  font-size: 17px;
-}
-
-.shrix-journey-calc-card p {
-  margin: 0 0 12px;
   color: var(--fw-text-muted);
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-.shrix-journey-calc-card span {
+.shrix-mission-calc-card__link {
   color: var(--fw-accent);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
 }
 
-.shrix-journey-list {
+.shrix-mission-learn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.shrix-mission-learn-card {
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--fw-border);
+  background: rgba(255, 252, 247, 0.8);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.shrix-mission-learn-card:hover {
+  border-color: var(--fw-border-strong);
+  box-shadow: var(--fw-shadow-soft);
+}
+
+.shrix-mission-learn-card h3 {
+  margin: 0 0 8px;
+  color: var(--fw-text-primary);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.shrix-mission-learn-card p {
   margin: 0;
-  padding-left: 20px;
   color: var(--fw-text-muted);
-  line-height: 1.75;
+  font-size: 13px;
+  line-height: 1.55;
 }
 
-.shrix-journey-list li + li {
-  margin-top: 8px;
-}
-
-.shrix-journey-inline-link {
+.shrix-mission-inline-link {
   display: inline-block;
   margin-top: 16px;
   color: var(--fw-accent);
@@ -165,11 +344,16 @@
   text-decoration: none;
 }
 
-.shrix-journey-inline-link:hover {
+.shrix-mission-inline-link:hover {
   color: var(--fw-accent-bright);
 }
 
-.shrix-journey-ai__badge {
+.shrix-mission-block--ai {
+  background: linear-gradient(135deg, rgba(255, 250, 245, 0.95) 0%, rgba(243, 232, 216, 0.55) 100%);
+  border-color: rgba(201, 162, 39, 0.35);
+}
+
+.shrix-mission-ai__badge {
   display: inline-block;
   margin-bottom: 12px;
   padding: 5px 10px;
@@ -183,108 +367,99 @@
   background: rgba(212, 175, 55, 0.1);
 }
 
-.shrix-journey-ai p {
-  margin: 0;
+.shrix-mission-ai__intro {
+  margin: 0 0 16px;
   color: var(--fw-text-secondary);
   font-size: 16px;
   line-height: 1.65;
   max-width: 720px;
 }
 
-.shrix-journey-checklist {
-  list-style: none;
+.shrix-mission-ai__list {
   margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 12px;
+  padding-left: 20px;
+  color: var(--fw-text-muted);
+  line-height: 1.7;
 }
 
-.shrix-journey-checklist li {
+.shrix-mission-ai__list li + li {
+  margin-top: 8px;
+}
+
+.shrix-mission-ai__note {
+  margin: 16px 0 0;
+  color: var(--fw-text-muted);
+  font-size: 12px;
+  font-style: italic;
+}
+
+.shrix-mission-checklist {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.shrix-mission-checklist__item {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--fw-border);
+  background: rgba(255, 252, 247, 0.85);
+  color: var(--fw-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.shrix-mission-checklist__item:hover {
+  border-color: var(--fw-border-strong);
+}
+
+.shrix-mission-checklist__item--done {
+  border-color: rgba(201, 162, 39, 0.35);
+  background: rgba(212, 175, 55, 0.08);
   color: var(--fw-text-muted);
-  font-size: 15px;
-  line-height: 1.55;
+  text-decoration: line-through;
+  text-decoration-color: rgba(122, 110, 96, 0.45);
 }
 
-.shrix-journey-checklist__mark {
+.shrix-mission-checklist__box {
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  margin-top: 2px;
-  border-radius: 6px;
-  border: 1.5px solid rgba(201, 162, 39, 0.45);
-  background: rgba(212, 175, 55, 0.1);
-}
-
-.shrix-journey-timeline {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.shrix-journey-timeline::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: 15px;
-  width: 2px;
-  background: linear-gradient(180deg, rgba(201, 162, 39, 0.5), rgba(201, 162, 39, 0.15));
-}
-
-.shrix-journey-timeline__step {
-  display: flex;
-  gap: 18px;
-  padding-bottom: 22px;
-}
-
-.shrix-journey-timeline__step:last-child {
-  padding-bottom: 0;
-}
-
-.shrix-journey-timeline__num {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
-  background: linear-gradient(145deg, #fffaf5, #f0e4d2);
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border-radius: 6px;
   border: 1.5px solid rgba(201, 162, 39, 0.45);
+  background: rgba(255, 252, 247, 0.95);
   color: var(--fw-accent);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
-  z-index: 1;
+  transition: 0.2s ease;
 }
 
-.shrix-journey-timeline__step h3 {
-  margin: 0 0 4px;
-  color: var(--fw-text-primary);
-  font-size: 16px;
+.shrix-mission-checklist__item--done .shrix-mission-checklist__box {
+  background: linear-gradient(135deg, #d4af37, #c9a227);
+  border-color: transparent;
+  color: var(--fw-text-on-accent);
 }
 
-.shrix-journey-timeline__step p {
-  margin: 0;
-  color: var(--fw-text-muted);
-  font-size: 14px;
-  line-height: 1.55;
-}
-
-.shrix-journey-next {
-  padding: 32px 34px;
-  border-radius: 22px;
-  border: 1px solid var(--fw-border-strong);
-  background: var(--fw-highlight-bg);
-  box-shadow: var(--fw-shadow-soft);
+.shrix-mission-next {
   text-align: center;
 }
 
-.shrix-journey-next__label {
-  margin: 0 0 8px;
+.shrix-mission-next__label {
+  margin: 0 0 14px;
   color: var(--fw-accent);
   font-size: 12px;
   font-weight: 800;
@@ -292,13 +467,21 @@
   text-transform: uppercase;
 }
 
-.shrix-journey-next h2 {
-  margin: 0 0 12px;
+.shrix-mission-next__card {
+  padding: 32px 34px;
+  border-radius: 22px;
+  border: 1px solid var(--fw-border-strong);
+  background: var(--fw-highlight-bg);
+  box-shadow: var(--fw-shadow-soft);
+}
+
+.shrix-mission-next__card h2 {
+  margin: 0 0 10px;
   color: var(--fw-text-primary);
   font-size: clamp(22px, 2.5vw, 28px);
 }
 
-.shrix-journey-next p {
+.shrix-mission-next__card p {
   margin: 0 auto 22px;
   max-width: 560px;
   color: var(--fw-text-muted);
@@ -306,7 +489,7 @@
   line-height: 1.65;
 }
 
-.shrix-journey-next__btn {
+.shrix-mission-next__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -321,47 +504,56 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.shrix-journey-next__btn:hover {
+.shrix-mission-next__btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(61, 52, 40, 0.12);
 }
 
-.shrix-journey-animate {
-  animation: shrix-journey-fade-up 0.65s ease both;
+.shrix-mission-animate {
+  animation: shrix-mission-fade-up 0.65s ease both;
 }
 
-.shrix-journey-block:nth-child(2) { animation-delay: 0.05s; }
-.shrix-journey-block:nth-child(3) { animation-delay: 0.1s; }
-.shrix-journey-block:nth-child(4) { animation-delay: 0.15s; }
-.shrix-journey-block:nth-child(5) { animation-delay: 0.2s; }
-.shrix-journey-block:nth-child(6) { animation-delay: 0.25s; }
-.shrix-journey-block:nth-child(7) { animation-delay: 0.3s; }
-.shrix-journey-next { animation-delay: 0.35s; }
+.shrix-mission-page .shrix-mission-block:nth-child(2) { animation-delay: 0.05s; }
+.shrix-mission-page .shrix-mission-block:nth-child(3) { animation-delay: 0.1s; }
+.shrix-mission-page .shrix-mission-block:nth-child(4) { animation-delay: 0.15s; }
+.shrix-mission-page .shrix-mission-block:nth-child(5) { animation-delay: 0.2s; }
+.shrix-mission-page .shrix-mission-block:nth-child(6) { animation-delay: 0.25s; }
+.shrix-mission-next { animation-delay: 0.3s; }
 
 @media (max-width: 850px) {
-  .shrix-journey-hero {
-    padding: 88px 22px 48px;
+  .shrix-mission-hero {
+    padding: 88px 22px 40px;
   }
 
-  .shrix-journey-page {
-    padding: 48px 22px 80px;
-    gap: 28px;
+  .shrix-mission-hero__top {
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .shrix-journey-block {
-    padding: 22px 20px;
+  .shrix-mission-page {
+    padding: 40px 22px 80px;
+    gap: 24px;
   }
 
-  .shrix-journey-calc-grid {
+  .shrix-mission-block {
+    padding: 22px 18px;
+  }
+
+  .shrix-mission-calc-grid,
+  .shrix-mission-learn-grid {
     grid-template-columns: 1fr;
   }
 
-  .shrix-journey-next {
+  .shrix-mission-track__steps {
+    min-width: 640px;
+  }
+
+  .shrix-mission-next__card {
     padding: 26px 22px;
   }
 }
 
-@keyframes shrix-journey-fade-up {
+@keyframes shrix-mission-fade-up {
   from {
     opacity: 0;
     transform: translateY(14px);
@@ -371,4 +563,13 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.shrix-mission-page-disclaimer {
+  max-width: 820px;
+  margin: -60px auto 0;
+  padding: 0 max(32px, calc((100vw - 1280px) / 2)) 80px;
+  color: var(--fw-text-muted);
+  font-size: 13px;
+  line-height: 1.65;
 }

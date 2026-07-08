@@ -8,7 +8,7 @@ export const FINANCIAL_JOURNEYS = [
     heroSubtitle:
       "Move from browsing listings to a clear home-buying plan with loan, savings, and affordability checks.",
     overview:
-      "Buying a home in India means balancing property cost, down payment savings, home loan EMI, registration charges, and future cash flow. This journey helps you estimate what you can afford, how much to save before applying, and whether the EMI fits your income comfortably.",
+      "Buying a home in India means balancing property cost, down payment savings, home loan EMI, registration charges, and future cash flow. This mission helps you estimate what you can afford, how much to save before applying, and whether the EMI fits your income comfortably.",
     calculators: [
       { title: "Home Loan Eligibility", path: "/home-loan-eligibility-calculator", desc: "Estimate the loan amount you may qualify for based on income." },
       { title: "EMI Calculator", path: "/emi-calculator", desc: "See monthly EMI across loan amount, rate, and tenure." },
@@ -53,7 +53,7 @@ export const FINANCIAL_JOURNEYS = [
     heroSubtitle:
       "Build a structured path from first investment to long-term compounding with the right calculators and habits.",
     overview:
-      "Wealth building is less about timing the market and more about consistent investing, realistic return assumptions, and staying invested through market cycles. This journey covers SIP planning, lumpsum decisions, CAGR understanding, and goal-linked investing for Indian savers.",
+      "Wealth building is less about timing the market and more about consistent investing, realistic return assumptions, and staying invested through market cycles. This mission covers SIP planning, lumpsum decisions, CAGR understanding, and goal-linked investing for Indian savers.",
     calculators: [
       { title: "SIP Calculator", path: "/sip-calculator", desc: "Project wealth from regular monthly investments." },
       { title: "Lumpsum Calculator", path: "/lumpsum-calculator", desc: "Estimate growth from a one-time investment." },
@@ -98,7 +98,7 @@ export const FINANCIAL_JOURNEYS = [
     heroSubtitle:
       "Navigate Old vs New tax regime, HRA exemption, and common deductions with clarity — not confusion.",
     overview:
-      "Tax planning for salaried professionals in India involves choosing the right regime, maximising eligible deductions, understanding HRA rules, and planning investments under sections like 80C. This journey helps you estimate liability and identify planning levers without overcomplicating returns filing.",
+      "Tax planning for salaried professionals in India involves choosing the right regime, maximising eligible deductions, understanding HRA rules, and planning investments under sections like 80C. This mission helps you estimate liability and identify planning levers without overcomplicating returns filing.",
     calculators: [
       { title: "Income Tax Calculator", path: "/income-tax-calculator", desc: "Compare Old and New regime tax estimates." },
       { title: "HRA Calculator", path: "/hra-calculator", desc: "Calculate HRA exemption and taxable portion." },
@@ -143,7 +143,7 @@ export const FINANCIAL_JOURNEYS = [
     heroSubtitle:
       "Estimate future education costs and build a savings plan that keeps pace with rising fees.",
     overview:
-      "Education costs in India rise faster than general inflation, especially for professional degrees and study abroad. This journey helps you project future fees, calculate required SIP or lumpsum savings, and align investments with your child's timeline.",
+      "Education costs in India rise faster than general inflation, especially for professional degrees and study abroad. This mission helps you project future fees, calculate required SIP or lumpsum savings, and align investments with your child's timeline.",
     calculators: [
       { title: "Goal Planner", path: "/goal-planner", desc: "Plan education corpus with target date and amount." },
       { title: "SIP Calculator", path: "/sip-calculator", desc: "Estimate monthly savings needed for the goal." },
@@ -188,7 +188,7 @@ export const FINANCIAL_JOURNEYS = [
     heroSubtitle:
       "From on-road price to monthly EMI — plan a car purchase that fits your budget without strain.",
     overview:
-      "A car purchase involves on-road price, down payment, loan EMI, insurance, fuel, and maintenance. This journey helps you estimate affordable loan terms, compare tenure options, and avoid overextending monthly cash flow for a vehicle.",
+      "A car purchase involves on-road price, down payment, loan EMI, insurance, fuel, and maintenance. This mission helps you estimate affordable loan terms, compare tenure options, and avoid overextending monthly cash flow for a vehicle.",
     calculators: [
       { title: "EMI Calculator", path: "/emi-calculator", desc: "Calculate car loan EMI across amounts and tenures." },
       { title: "Goal Planner", path: "/goal-planner", desc: "Save for down payment before taking a loan." },
@@ -233,7 +233,7 @@ export const FINANCIAL_JOURNEYS = [
     heroSubtitle:
       "Build a retirement plan that accounts for inflation, longevity, and post-retirement income needs.",
     overview:
-      "Retirement planning in India combines EPF, NPS, PPF, mutual funds, and other savings to replace your salary after you stop working. This journey helps you estimate the corpus needed, project existing benefits, and identify the monthly savings gap.",
+      "Retirement planning in India combines EPF, NPS, PPF, mutual funds, and other savings to replace your salary after you stop working. This mission helps you estimate the corpus needed, project existing benefits, and identify the monthly savings gap.",
     calculators: [
       { title: "Retirement Calculator", path: "/retirement-calculator", desc: "Estimate corpus needed for retirement income." },
       { title: "EPF Calculator", path: "/epf-calculator", desc: "Project Employee Provident Fund growth." },
@@ -278,7 +278,7 @@ export const FINANCIAL_JOURNEYS = [
     heroSubtitle:
       "Understand your total debt burden and create a practical plan to reduce interest and become debt-free faster.",
     overview:
-      "Managing multiple loans — home, car, personal, or credit — requires knowing total EMI outflow, interest cost, and prepayment benefits. This journey helps prioritise high-interest debt, plan prepayments, and restore financial flexibility.",
+      "Managing multiple loans — home, car, personal, or credit — requires knowing total EMI outflow, interest cost, and prepayment benefits. This mission helps prioritise high-interest debt, plan prepayments, and restore financial flexibility.",
     calculators: [
       { title: "EMI Calculator", path: "/emi-calculator", desc: "Break down EMI into principal and interest." },
       { title: "Loan Prepayment", path: "/loan-prepayment-calculator", desc: "See interest saved from partial or full prepayment." },
@@ -323,7 +323,7 @@ export const FINANCIAL_JOURNEYS = [
     heroSubtitle:
       "Ensure your family is financially protected with the right insurance mindset, emergency fund, and goal planning.",
     overview:
-      "Financial protection goes beyond buying policies — it means adequate term life cover, health emergency buffer, income replacement planning, and organised family goals. This journey helps you quantify protection needs and align savings with family security.",
+      "Financial protection goes beyond buying policies — it means adequate term life cover, health emergency buffer, income replacement planning, and organised family goals. This mission helps you quantify protection needs and align savings with family security.",
     calculators: [
       { title: "Goal Planner", path: "/goal-planner", desc: "Plan emergency fund and protection targets." },
       { title: "Retirement Calculator", path: "/retirement-calculator", desc: "Ensure retirement savings protect spouse long-term." },

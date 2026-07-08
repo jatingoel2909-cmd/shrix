@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import ResultCard from "./ui/ResultCard";
 import { formatCurrency } from "../utils/calculatorFormat";
@@ -53,6 +52,7 @@ function HraCalculator({
       showHeader={showHeader}
       variant="default"
       className={className}
+      calculatorId="/hra-calculator"
       form={
         <>
           <CurrencyInput
@@ -109,12 +109,6 @@ function HraCalculator({
             value={formatCurrency(taxableHra)}
           />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="Exemption = Minimum of (Actual HRA, Rent − 10% of Basic, 50%/40% of Basic)"
-          explanation="Metro cities use 50% of basic salary; non-metro cities use 40%. The lowest of the three eligible amounts is exempt from tax."
-        />
       }
     />
   );

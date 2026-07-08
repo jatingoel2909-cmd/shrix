@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import InputField from "./ui/InputField";
 import ResultCard from "./ui/ResultCard";
@@ -38,6 +37,7 @@ function InflationCalculator({
       showHeader={showHeader}
       variant="default"
       className={className}
+      calculatorId="/inflation-calculator"
       form={
         <>
           <CurrencyInput
@@ -79,12 +79,6 @@ function InflationCalculator({
             value={formatCurrency(increase)}
           />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="Future Cost = Current Amount × (1 + Inflation Rate)^Years"
-          explanation="This shows how much money you would need in the future to match today's purchasing power."
-        />
       }
     />
   );

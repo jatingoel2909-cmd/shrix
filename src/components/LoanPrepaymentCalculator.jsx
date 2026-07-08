@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import InputField from "./ui/InputField";
 import ResultCard from "./ui/ResultCard";
@@ -84,6 +83,7 @@ function LoanPrepaymentCalculator({
       showHeader={showHeader}
       variant="alt"
       className={className}
+      calculatorId="/loan-prepayment-calculator"
       form={
         <>
           <CurrencyInput
@@ -133,12 +133,6 @@ function LoanPrepaymentCalculator({
           />
           <ResultCard key={revisedImpact} label="Revised Loan Impact" value={revisedImpact} />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="Interest Saved = Original Total Interest − New Total Interest (same EMI, reduced tenure)"
-          explanation="This assumes your EMI stays unchanged after prepayment and the loan tenure is shortened. Actual lender terms, charges, and recalculation methods may differ."
-        />
       }
     />
   );

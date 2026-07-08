@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import InputField from "./ui/InputField";
 import ResultCard from "./ui/ResultCard";
@@ -61,6 +60,7 @@ function CompoundInterestCalculator({
       showHeader={showHeader}
       variant="alt"
       className={className}
+      calculatorId="/compound-interest-calculator"
       form={
         <>
           <CurrencyInput
@@ -124,12 +124,6 @@ function CompoundInterestCalculator({
             highlight
           />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="A = P × (1 + r / n)^(n × t)"
-          explanation="P is principal, r is annual rate, n is compounding frequency per year, and t is time in years. More frequent compounding leads to slightly higher returns."
-        />
       }
     />
   );

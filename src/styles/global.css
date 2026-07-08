@@ -234,6 +234,14 @@ body {
   font-weight: 900;
 }
 
+.shrix-dashboard__note {
+  margin: -18px 0 18px !important;
+  color: var(--fw-text-muted) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2px;
+}
+
 .shrix-dashboard h3 {
   font-size: 26px;
   margin: 10px 0 30px;

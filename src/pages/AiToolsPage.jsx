@@ -5,8 +5,8 @@ import "../styles/global.css";
 
 const tools = [
   {
-    title: "AI Money Coach",
-    text: "Personalised guidance on budgeting, saving habits, and building a stronger financial foundation.",
+    title: "AI Money Guide",
+    text: "Educational prompts on budgeting, saving habits, and building a stronger financial foundation.",
   },
   {
     title: "AI SIP Planner",
@@ -17,7 +17,7 @@ const tools = [
     text: "Get plain-language explanations of financial terms, products, and calculator results.",
   },
   {
-    title: "AI Loan Advisor",
+    title: "AI Loan Guide",
     text: "Understand loan options, EMI impact, and repayment scenarios with guided comparisons.",
   },
   {
@@ -57,8 +57,9 @@ function AiToolsPage() {
         variant="alt"
       >
         <p className="shrix-info-disclaimer">
-          These tools are planned for educational guidance and will not replace
-          professional financial advice.
+          These tools are planned for educational guidance only. They are not live,
+          are not financial, tax, investment, or loan advice, and will not replace
+          qualified professionals.
         </p>
 
         <div className="shrix-info-grid shrix-info-grid--wide">

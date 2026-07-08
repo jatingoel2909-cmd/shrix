@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import InputField from "./ui/InputField";
 import ResultCard from "./ui/ResultCard";
@@ -35,6 +34,7 @@ function GratuityCalculator({
       showHeader={showHeader}
       variant="alt"
       className={className}
+      calculatorId="/gratuity-calculator"
       form={
         <>
           <CurrencyInput
@@ -60,12 +60,6 @@ function GratuityCalculator({
           label="Gratuity Amount"
           value={formatCurrency(gratuity)}
           highlight
-        />
-      }
-      formula={
-        <CalculatorFormula
-          formula="Gratuity = (Monthly Salary × 15 × Years of Service) / 26"
-          explanation="Eligible employees with at least 5 years of continuous service qualify for gratuity under Indian law."
         />
       }
     />

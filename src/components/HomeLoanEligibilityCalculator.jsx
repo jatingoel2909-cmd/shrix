@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import InputField from "./ui/InputField";
 import ResultCard from "./ui/ResultCard";
@@ -52,6 +51,7 @@ function HomeLoanEligibilityCalculator({
       showHeader={showHeader}
       variant="default"
       className={className}
+      calculatorId="/home-loan-eligibility-calculator"
       form={
         <>
           <CurrencyInput
@@ -100,12 +100,6 @@ function HomeLoanEligibilityCalculator({
             value={formatCurrency(loanEligibility)}
           />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="Eligible EMI = (Monthly Income × 50%) − Existing EMI | Loan Amount = EMI × [(1 + r)^n − 1] / [r × (1 + r)^n]"
-          explanation="Lenders commonly use a fixed obligation-to-income ratio (often around 50%) to estimate how much EMI you can afford. Actual eligibility varies by lender, credit profile, and property."
-        />
       }
     />
   );

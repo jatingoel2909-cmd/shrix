@@ -50,6 +50,7 @@ function RdCalculator({
       showHeader={showHeader}
       variant="alt"
       className={className}
+      calculatorId="/rd-calculator"
       form={
         <>
           <CurrencyInput

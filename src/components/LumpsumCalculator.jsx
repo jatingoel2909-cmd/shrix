@@ -38,6 +38,7 @@ function LumpsumCalculator({
       showHeader={showHeader}
       variant="alt"
       className={className}
+      calculatorId="/lumpsum-calculator"
       form={
         <>
           <CurrencyInput

@@ -33,7 +33,8 @@ function AboutPage() {
           <h3>Who We Are</h3>
           <p>
             FOINWI is a premium financial platform built for Indian users who want
-            clear, practical answers about money. We combine accurate calculators
+            clear, practical answers about money. We combine formula-based educational
+            calculators
             with educational content so you can understand SIP, loans, deposits,
             retirement, tax planning, and everyday financial decisions — without
             wading through jargon or noise.
@@ -49,8 +50,8 @@ function AboutPage() {
           <article className="shrix-info-card">
             <h3>Our Vision</h3>
             <p>
-              Helping millions of people make smarter financial decisions with
-              confidence.
+              Helping users explore financial concepts and compare scenarios with
+              greater clarity.
             </p>
           </article>
         </div>

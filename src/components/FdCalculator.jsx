@@ -51,6 +51,7 @@ function FdCalculator({
       showHeader={showHeader}
       variant="default"
       className={className}
+      calculatorId="/fd-calculator"
       form={
         <>
           <CurrencyInput

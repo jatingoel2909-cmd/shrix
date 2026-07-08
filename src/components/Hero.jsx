@@ -13,6 +13,7 @@ function Hero() {
 
       <div className="shrix-dashboard">
         <p>SIP Growth Preview</p>
+        <p className="shrix-dashboard__note">Illustrative example only. Not a forecast.</p>
         <h3>₹10,000/month</h3>
 
         <div className="shrix-bars">

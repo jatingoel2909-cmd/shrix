@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 const chatPreview = [
   {
     user: "How much SIP do I need for ₹1 crore?",
-    ai: "I’ll help estimate the monthly SIP and explain the result step by step.",
+    ai: "Preview: When available, FOINWI AI will explain estimated monthly SIP needs and calculator results step by step.",
   },
   {
     user: "Can I afford this EMI?",
-    ai: "I’ll help compare EMI, income, tenure, and affordability in simple language.",
+    ai: "Preview: When available, FOINWI AI will help compare EMI, income, tenure, and affordability in simple language.",
   },
   {
     user: "How should I plan retirement?",
-    ai: "I’ll help understand inflation, monthly savings gap, and long-term planning direction.",
+    ai: "Preview: When available, FOINWI AI will explain inflation, savings gaps, and planning concepts — not personalised advice.",
   },
 ];
 
@@ -49,8 +49,8 @@ function AiToolsPreviewSection() {
         </div>
 
         <p className="shrix-ai-assistant-preview__subtitle">
-          A future AI assistant to help users understand calculators, compare options,
-          and plan smarter money decisions.
+          A planned AI assistant to help users understand calculators, compare options,
+          and explore money concepts more clearly.
         </p>
 
         <div className="shrix-ai-assistant-preview__chat">
@@ -69,7 +69,9 @@ function AiToolsPreviewSection() {
         </div>
 
         <p className="shrix-ai-assistant-preview__disclaimer">
-          Educational guidance only. Not financial advice.
+          Preview only. AI features are not live. Educational guidance only — not
+          financial, tax, investment, or loan advice. Consult qualified professionals
+          before making financial decisions.
         </p>
       </article>
 

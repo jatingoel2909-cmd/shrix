@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import ResultCard from "./ui/ResultCard";
 import { formatCurrency } from "../utils/calculatorFormat";
@@ -88,6 +87,7 @@ function IncomeTaxCalculator({
       showHeader={showHeader}
       variant="alt"
       className={className}
+      calculatorId="/income-tax-calculator"
       form={
         <>
           <CurrencyInput
@@ -142,12 +142,6 @@ function IncomeTaxCalculator({
             value={formatCurrency(netIncome)}
           />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="Taxable Income = Annual Income − Deductions (Old) or − Standard Deduction (New) | Tax = Progressive slab rates + 4% cess"
-          explanation="This is an educational estimate only. Tax rules, rebates, surcharges, and deductions change frequently. Consult a qualified tax professional for accurate filing."
-        />
       }
     />
   );

@@ -40,6 +40,7 @@ function CagrCalculator({
       showHeader={showHeader}
       variant="default"
       className={className}
+      calculatorId="/cagr-calculator"
       form={
         <>
           <CurrencyInput

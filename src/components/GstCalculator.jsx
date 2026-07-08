@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import InputField from "./ui/InputField";
 import ResultCard from "./ui/ResultCard";
@@ -57,6 +56,7 @@ function GstCalculator({
       showHeader={showHeader}
       variant="default"
       className={className}
+      calculatorId="/gst-calculator"
       form={
         <>
           <CurrencyInput
@@ -112,12 +112,6 @@ function GstCalculator({
             highlight
           />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="Add GST: GST = Amount × Rate / 100 | Remove GST: Base = Amount / (1 + Rate / 100)"
-          explanation="Use Add GST when the entered amount is exclusive of tax. Use Remove GST when the entered amount already includes tax."
-        />
       }
     />
   );

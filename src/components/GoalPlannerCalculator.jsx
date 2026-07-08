@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import InputField from "./ui/InputField";
 import ResultCard from "./ui/ResultCard";
@@ -59,6 +58,7 @@ function GoalPlannerCalculator({
       showHeader={showHeader}
       variant="default"
       className={className}
+      calculatorId="/goal-planner"
       form={
         <>
           <CurrencyInput
@@ -115,12 +115,6 @@ function GoalPlannerCalculator({
             value={formatCurrency(goal)}
           />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="Projected = FV(Current Savings) + FV(Monthly SIP). Gap = Goal − Projected."
-          explanation="Compares your projected corpus against the target to show whether you are on track."
-        />
       }
     />
   );

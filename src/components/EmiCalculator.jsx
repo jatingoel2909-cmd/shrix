@@ -47,6 +47,7 @@ function EmiCalculator({
       showHeader={showHeader}
       variant="alt"
       className={className}
+      calculatorId="/emi-calculator"
       form={
         <>
           <CurrencyInput

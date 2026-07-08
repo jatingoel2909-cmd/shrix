@@ -140,6 +140,28 @@
   background: rgba(212, 175, 55, 0.08);
 }
 
+.shrix-learn-disclaimer {
+  max-width: 820px;
+  margin: -24px auto 0;
+  padding: 18px max(32px, calc((100vw - 1280px) / 2));
+  font-size: 14px;
+  color: var(--fw-text-muted);
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid var(--fw-border);
+  border-radius: 16px;
+}
+
+.shrix-calculators-disclaimer {
+  max-width: 820px;
+  margin: 0 auto 40px;
+  padding: 18px 22px;
+  font-size: 14px;
+  color: var(--fw-text-muted);
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid var(--fw-border);
+  border-radius: 16px;
+}
+
 .shrix-info-copy {
   color: var(--fw-text-muted);
   font-size: 18px;

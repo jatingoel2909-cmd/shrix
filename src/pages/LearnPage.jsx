@@ -112,6 +112,11 @@ function LearnPage() {
           </div>
         </section>
       </InfoPageLayout>
+      <p className="shrix-info-disclaimer shrix-learn-disclaimer">
+        FOINWI learning content is for educational purposes only. It is not financial,
+        tax, investment, loan, or legal advice. Consult qualified professionals
+        before making financial decisions.
+      </p>
       <Footer />
     </div>
   );

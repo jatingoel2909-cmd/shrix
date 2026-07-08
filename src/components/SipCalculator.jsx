@@ -43,6 +43,7 @@ function SipCalculator({
       showHeader={showHeader}
       variant="default"
       className={className}
+      calculatorId="/sip-calculator"
       form={
         <>
           <CurrencyInput

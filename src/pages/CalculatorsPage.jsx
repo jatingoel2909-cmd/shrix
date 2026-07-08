@@ -10,9 +10,13 @@ function CalculatorsPage() {
       <CalculatorGrid
         sectionLabel="Complete Toolkit"
         title="All Financial Calculators"
-        subtitle="Explore all financial planning, investment, loan, retirement and tax calculators."
+        subtitle="Explore financial planning, investment, loan, retirement, and tax calculators for educational estimates."
         sectionId={null}
       />
+      <p className="shrix-info-disclaimer shrix-calculators-disclaimer">
+        Calculator results are estimates only and depend on your inputs and assumptions.
+        For educational purposes only. Not financial, tax, investment, or loan advice.
+      </p>
       <Footer />
     </div>
   );

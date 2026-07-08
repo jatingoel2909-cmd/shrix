@@ -1,6 +1,5 @@
 import { useState } from "react";
 import CalculatorLayout from "./ui/CalculatorLayout";
-import CalculatorFormula from "./ui/CalculatorFormula";
 import CurrencyInput from "./ui/CurrencyInput";
 import InputField from "./ui/InputField";
 import ResultCard from "./ui/ResultCard";
@@ -59,6 +58,7 @@ function EpfCalculator({
       showHeader={showHeader}
       variant="default"
       className={className}
+      calculatorId="/epf-calculator"
       form={
         <>
           <CurrencyInput
@@ -112,12 +112,6 @@ function EpfCalculator({
             highlight
           />
         </>
-      }
-      formula={
-        <CalculatorFormula
-          formula="Monthly EPF = Basic × (12% + 3.67%). Corpus = FV of current balance + FV of monthly contributions."
-          explanation="Uses standard employee (12%) and employer EPF (3.67%) contributions with monthly compounding."
-        />
       }
     />
   );
