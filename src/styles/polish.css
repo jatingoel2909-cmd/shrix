@@ -17,7 +17,7 @@
   --fw-space-card-sm: 22px;
   --fw-space-gap: 24px;
   --fw-space-gap-sm: 16px;
-  --fw-space-stack: 32px;
+  --fw-space-stack: 36px;
 
   --fw-shadow-hover: 0 18px 44px rgba(61, 52, 40, 0.11);
   --fw-shadow-lift: 0 10px 30px rgba(61, 52, 40, 0.09);
@@ -33,12 +33,19 @@
   --fw-type-h3: 20px;
   --fw-type-h2: clamp(28px, 3vw, 36px);
   --fw-type-h1: clamp(32px, 4vw, 46px);
+  --fw-type-display: clamp(52px, 6.5vw, 88px);
 
   --fw-icon-sm: 24px;
   --fw-icon-md: 32px;
   --fw-icon-lg: 40px;
 
-  --fw-accent-gradient: linear-gradient(145deg, var(--fw-accent-bright) 0%, var(--fw-accent) 100%);
+  --fw-btn-height: 48px;
+  --fw-btn-padding-x: 24px;
+  --fw-touch-min: 44px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Page load */
@@ -59,10 +66,10 @@
 /* Scroll reveal */
 .fw-scroll-reveal {
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(16px);
   transition:
-    opacity 0.65s var(--fw-ease) var(--fw-reveal-delay, 0ms),
-    transform 0.65s var(--fw-ease) var(--fw-reveal-delay, 0ms);
+    opacity 0.6s var(--fw-ease) var(--fw-reveal-delay, 0ms),
+    transform 0.6s var(--fw-ease) var(--fw-reveal-delay, 0ms);
 }
 
 .fw-scroll-reveal--visible {
@@ -71,25 +78,65 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .shrix-app,
-  .fw-scroll-reveal {
-    animation: none;
-    opacity: 1;
-    transform: none;
-    transition: none;
+  .fw-scroll-reveal,
+  .shrix-mission-animate {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
 
-/* Typography rhythm */
+/* Typography hierarchy */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
 .shrix-section-label {
   font-size: var(--fw-type-label);
   letter-spacing: 1.2px;
   line-height: 1.4;
+  font-weight: 800;
 }
 
-/* Navigation active state */
+.shrix-info-page h1,
+.la-hero h1,
+.fhs-hero h1,
+.shrix-mission-hero__meta h1 {
+  font-size: var(--fw-type-h1);
+  letter-spacing: -0.6px;
+  line-height: 1.1;
+}
+
+.shrix-calculators h2,
+.shrix-home-section h2,
+.shrix-journey-section h2,
+.shrix-info-section__title,
+.la-section__head h2,
+.fhs-dashboard__section h3,
+.calc-layout__header h2 {
+  font-size: var(--fw-type-h2);
+  letter-spacing: -0.4px;
+  line-height: 1.15;
+}
+
+/* Navigation */
 .shrix-nav-links a {
   position: relative;
+  min-height: var(--fw-touch-min);
+  display: inline-flex;
+  align-items: center;
+}
+
+.shrix-nav-links a {
+  transition: color var(--fw-duration) var(--fw-ease);
 }
 
 .shrix-nav-links a.shrix-nav-link--active {
@@ -101,10 +148,16 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -8px;
+  bottom: 4px;
   height: 2px;
   border-radius: 2px;
   background: var(--fw-accent-bright);
+}
+
+.shrix-nav-drawer__links a {
+  min-height: var(--fw-touch-min);
+  display: flex;
+  align-items: center;
 }
 
 .shrix-nav-drawer__links a.shrix-nav-link--active {
@@ -113,15 +166,25 @@
   background: rgba(212, 175, 55, 0.1);
 }
 
-/* Unified CTA buttons */
+/* Unified buttons */
 .shrix-primary,
+.shrix-secondary,
 .shrix-view-all-btn,
+.la-btn,
 .la-btn--primary,
+.la-btn--ghost,
+.fhs-btn,
 .fhs-btn--primary,
-.shrix-mission-hero__start {
+.fhs-btn--ghost,
+.shrix-mission-hero__start,
+.shrix-mission-next__btn {
   font-family: inherit;
   font-weight: 800;
+  font-size: var(--fw-type-body);
   letter-spacing: 0.01em;
+  min-height: var(--fw-btn-height);
+  padding: 0 var(--fw-btn-padding-x);
+  border-radius: var(--fw-radius-pill);
   transition:
     transform var(--fw-duration) var(--fw-ease),
     box-shadow var(--fw-duration) var(--fw-ease),
@@ -131,29 +194,77 @@
     color var(--fw-duration) var(--fw-ease);
 }
 
-.shrix-primary:hover,
-.shrix-view-all-btn:hover,
-.la-btn--primary:hover:not(:disabled),
-.fhs-btn--primary:hover:not(:disabled),
-.shrix-mission-hero__start:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--fw-shadow-hover);
+.shrix-primary,
+.shrix-view-all-btn,
+.la-btn--primary,
+.fhs-btn--primary,
+.shrix-mission-hero__start,
+.shrix-mission-next__btn {
+  background: var(--fw-accent-gradient);
+  color: var(--fw-text-on-accent);
+  border: 1px solid var(--fw-border-strong);
+  box-shadow: var(--fw-shadow-card);
 }
 
 .shrix-secondary,
 .la-btn--ghost,
 .fhs-btn--ghost {
-  transition:
-    transform var(--fw-duration) var(--fw-ease),
-    border-color var(--fw-duration) var(--fw-ease),
-    color var(--fw-duration) var(--fw-ease),
-    background var(--fw-duration) var(--fw-ease);
+  background: transparent;
+  border: 1px solid var(--fw-border-strong);
+  color: var(--fw-text-primary);
+}
+
+.shrix-primary:hover,
+.shrix-view-all-btn:hover,
+.la-btn--primary:hover:not(:disabled),
+.fhs-btn--primary:hover:not(:disabled),
+.shrix-mission-hero__start:hover,
+.shrix-mission-next__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--fw-shadow-hover);
 }
 
 .shrix-secondary:hover,
 .la-btn--ghost:hover:not(:disabled),
 .fhs-btn--ghost:hover:not(:disabled) {
   transform: translateY(-1px);
+  border-color: var(--fw-accent-bright);
+  color: var(--fw-accent);
+}
+
+.la-btn,
+.fhs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fhs-btn:disabled,
+.la-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Card action links */
+.shrix-card-link,
+.shrix-journey-card__cta,
+.la-link-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--fw-touch-min);
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: var(--fw-type-body);
+  font-weight: 800;
+  transition: color var(--fw-duration) var(--fw-ease);
+}
+
+.shrix-card-link:hover,
+.shrix-journey-card__cta:hover,
+.la-link-btn:hover {
+  color: var(--fw-accent-bright);
 }
 
 /* Unified badges */
@@ -163,6 +274,7 @@
 .shrix-info-card__badge,
 .shrix-ai-assistant-preview__badge,
 .shrix-journey-card__duration,
+.shrix-journey-card__difficulty,
 .la-badge,
 .la-timeline__preview-badge,
 .fhs-score-card__band {
@@ -170,24 +282,54 @@
   font-weight: 800;
   letter-spacing: 0.5px;
   line-height: 1.3;
+  border-radius: var(--fw-radius-pill);
 }
 
-/* Unified icon sizing */
+.shrix-journey-card__difficulty,
+.shrix-mission-badge--difficulty,
+.la-badge--beginner,
+.la-badge--intermediate {
+  border: 1px solid var(--fw-border);
+}
+
+.shrix-journey-card__difficulty,
+.shrix-mission-badge--difficulty,
+.la-badge--beginner {
+  color: var(--fw-text-secondary);
+  background: var(--fw-surface-muted);
+}
+
+.la-badge--intermediate,
+.shrix-journey-card__duration,
+.shrix-mission-badge:not(.shrix-mission-badge--difficulty) {
+  color: var(--fw-accent);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+/* Icons */
 .shrix-icon,
-.calculator-icon,
+.calculator-icon {
+  font-size: var(--fw-icon-md);
+  line-height: 1;
+  margin-bottom: var(--fw-space-gap-sm);
+  display: block;
+}
+
 .la-path-card__icon,
 .shrix-journey-card__icon span {
   line-height: 1;
 }
 
-.shrix-icon,
-.calculator-icon {
-  font-size: var(--fw-icon-md);
-  margin-bottom: var(--fw-space-gap-sm);
-  display: block;
+.shrix-mission-calc-card__icon,
+.la-hero__icon,
+.fhs-hero__icon,
+.shrix-mission-hero__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Interactive cards — premium lift */
+/* Card surfaces — unified radius & lift */
 .shrix-card,
 .calculator-card,
 .shrix-home-card,
@@ -198,22 +340,35 @@
 .la-timeline__card,
 .la-tool-card,
 .la-more-path,
+.la-continue,
 .la-continue__card,
 .fhs-intro-card,
 .fhs-question-card,
+.fhs-score-card,
 .fhs-panel,
 .fhs-suggest-card,
 .shrix-ai-assistant-preview,
 .shrix-ai-preview-card,
 .shrix-mission-block,
+.shrix-mission-calc-card,
+.shrix-mission-next__card,
 .shrix-dashboard,
 .calc-result-card,
-.calc-result-support__card {
+.calc-result-support__card,
+.calc-formula {
+  border-radius: var(--fw-radius-lg);
   transition:
     transform var(--fw-duration) var(--fw-ease),
     box-shadow var(--fw-duration) var(--fw-ease),
     border-color var(--fw-duration) var(--fw-ease),
     background var(--fw-duration) var(--fw-ease);
+}
+
+.la-continue,
+.fhs-score-card,
+.shrix-dashboard,
+.shrix-ai-assistant-preview {
+  border-radius: var(--fw-radius-xl);
 }
 
 .shrix-card:hover,
@@ -226,7 +381,8 @@
 .la-tool-card:hover,
 .la-more-path:hover,
 .shrix-ai-preview-card:hover,
-.shrix-mission-block:hover {
+.shrix-mission-block:hover,
+.shrix-mission-calc-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--fw-shadow-hover);
   border-color: var(--fw-border-strong);
@@ -236,28 +392,50 @@
 .calculator-card:has(a),
 .shrix-home-card:has(a),
 .shrix-journey-card:has(a),
-.la-path-card:has(a) {
+.la-path-card:has(a),
+.shrix-mission-calc-card {
   cursor: pointer;
 }
 
-.shrix-card-link,
+/* Equal-height card grids */
+.shrix-grid,
+.shrix-home-grid,
+.shrix-journey-grid,
+.shrix-info-grid,
+.la-path-grid {
+  align-items: stretch;
+}
+
+.shrix-home-card,
+.shrix-journey-card,
+.shrix-info-card,
+.la-path-card,
+.shrix-ai-preview-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.shrix-home-card p,
+.shrix-journey-card p,
+.shrix-info-card p,
+.la-path-card > p,
+.shrix-ai-preview-card p {
+  flex: 1;
+}
+
 .shrix-journey-card__cta,
-.la-link-btn {
-  transition: color var(--fw-duration) var(--fw-ease);
+.la-path-card .la-btn--primary {
+  margin-top: auto;
 }
 
-/* Card links feel tappable */
-.shrix-card-link:hover,
-.shrix-journey-card__cta:hover {
-  color: var(--fw-accent-bright);
-}
-
-/* Chip / pill links */
+/* Chips & tags */
 .la-chip,
 .la-chip-link,
 .fhs-chip-link,
 .calc-result-support__link,
-.shrix-info-tags li {
+.shrix-info-tags li,
+.shrix-home-path {
   transition:
     transform var(--fw-duration) var(--fw-ease),
     box-shadow var(--fw-duration) var(--fw-ease),
@@ -273,7 +451,7 @@
   box-shadow: var(--fw-shadow-lift);
 }
 
-/* Section breathing room */
+/* Section rhythm */
 .shrix-calculators,
 .shrix-home-section,
 .shrix-journey-section,
@@ -282,44 +460,143 @@
 .la-main,
 .fhs-main,
 .shrix-mission-page,
-.calc-layout {
+.calc-layout,
+.shrix-trust {
   scroll-margin-top: 132px;
 }
 
-/* Hero polish */
 .la-hero,
 .fhs-hero,
 .shrix-mission-hero {
-  padding-top: calc(var(--fw-space-section-y) + 12px);
+  padding-top: calc(var(--fw-space-section-y) + 16px);
 }
 
-/* Focus visibility */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible {
-  outline: 2px solid var(--fw-accent-bright);
-  outline-offset: 2px;
+.shrix-info-page__content {
+  gap: var(--fw-space-stack);
 }
 
-/* Result cards subtle hover */
+.shrix-info-section {
+  gap: var(--fw-space-gap-sm);
+}
+
+.fhs-dashboard,
+.la-section {
+  margin-bottom: var(--fw-space-stack);
+}
+
+/* Inputs */
+.calc-field__input,
+.calc-field__select,
+.sip-form input {
+  border-radius: var(--fw-radius-md);
+  min-height: var(--fw-touch-min);
+}
+
+/* Result cards */
 .calc-result-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--fw-shadow-lift);
 }
 
+/* Footer & links */
+.shrix-footer__links a,
+.shrix-footer__contact a,
+.shrix-footer-social a {
+  transition:
+    color var(--fw-duration) var(--fw-ease),
+    transform var(--fw-duration) var(--fw-ease),
+    border-color var(--fw-duration) var(--fw-ease),
+    background var(--fw-duration) var(--fw-ease);
+}
+
+.shrix-footer-social a {
+  min-width: var(--fw-touch-min);
+  min-height: var(--fw-touch-min);
+  border-radius: var(--fw-radius-sm);
+}
+
+.shrix-footer-social a:hover {
+  transform: translateY(-2px);
+}
+
+/* Disclaimers */
+.shrix-info-disclaimer,
+.shrix-learn-disclaimer,
+.shrix-calculators-disclaimer,
+.la-notice,
+.fhs-disclaimer,
+.shrix-mission-page-disclaimer {
+  border-radius: var(--fw-radius-md);
+  font-size: var(--fw-type-caption);
+  line-height: 1.65;
+  color: var(--fw-text-muted);
+}
+
+/* Focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--fw-accent-bright);
+  outline-offset: 2px;
+}
+
+/* Mission page — keep load animation, skip scroll-reveal conflict */
+.shrix-mission-animate {
+  animation: fw-mission-enter 0.65s var(--fw-ease) both;
+}
+
+@keyframes fw-mission-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 950px) {
   :root {
     --fw-space-section-y: var(--fw-space-section-y-md);
+    --fw-btn-padding-x: 20px;
   }
 
   .shrix-nav-links a.shrix-nav-link--active::after {
     display: none;
+  }
+
+  .shrix-hero {
+    gap: 48px;
   }
 }
 
 @media (max-width: 620px) {
   :root {
     --fw-space-section-y: var(--fw-space-section-y-sm);
+    --fw-space-gap: 18px;
+    --fw-space-stack: 28px;
+  }
+
+  .shrix-hero-actions,
+  .shrix-home-section__action,
+  .fhs-questionnaire__actions {
+    flex-direction: column;
+  }
+
+  .shrix-primary,
+  .shrix-secondary,
+  .shrix-view-all-btn,
+  .la-btn,
+  .fhs-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .shrix-card {
+    min-height: 0;
   }
 }

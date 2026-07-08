@@ -12,8 +12,9 @@ const REVEAL_SELECTORS = [
   ".shrix-trust-card",
   ".shrix-dashboard",
   ".shrix-ai-assistant-preview",
-  ".shrix-mission-block",
-  ".shrix-mission-timeline__step",
+  ".shrix-ai-preview-card",
+  ".shrix-mission-calc-card",
+  ".shrix-mission-next",
   ".la-path-card",
   ".la-continue",
   ".la-timeline__card",
@@ -23,7 +24,6 @@ const REVEAL_SELECTORS = [
   ".fhs-score-card",
   ".fhs-panel",
   ".fhs-suggest-card",
-  ".calc-result-card",
   ".calc-result-support__card",
   ".calc-result-support",
 ].join(",");
@@ -40,7 +40,7 @@ function ScrollReveal() {
     elements.forEach((element, index) => {
       element.classList.remove("fw-scroll-reveal--visible");
       element.classList.add("fw-scroll-reveal");
-      element.style.setProperty("--fw-reveal-delay", `${Math.min(index % 6, 5) * 70}ms`);
+      element.style.setProperty("--fw-reveal-delay", `${Math.min(index % 6, 5) * 60}ms`);
     });
 
     const observer = new IntersectionObserver(
@@ -52,7 +52,7 @@ function ScrollReveal() {
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      { threshold: 0.1, rootMargin: "0px 0px -32px 0px" },
     );
 
     elements.forEach((element) => observer.observe(element));

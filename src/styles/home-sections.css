@@ -61,6 +61,10 @@
   padding: var(--fw-space-card);
   box-shadow: var(--fw-shadow-card);
   backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 200px;
 }
 
 .shrix-home-card h3 {
@@ -75,6 +79,7 @@
   line-height: 1.65;
   margin: 0;
   font-size: var(--fw-type-body);
+  flex: 1;
 }
 
 .shrix-home-card__link {

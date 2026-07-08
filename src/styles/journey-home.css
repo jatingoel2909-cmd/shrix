@@ -95,9 +95,9 @@
 }
 
 .shrix-journey-card__difficulty {
-  border: 1px solid rgba(47, 61, 79, 0.15);
+  border: 1px solid var(--fw-border);
   color: var(--fw-text-secondary);
-  background: rgba(255, 252, 247, 0.9);
+  background: var(--fw-surface-muted);
 }
 
 .shrix-journey-card__cta {

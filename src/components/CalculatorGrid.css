@@ -61,16 +61,19 @@
 }
 
 .shrix-card-link {
-  display: inline-block;
-  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
   background: none;
   border: none;
   color: var(--fw-accent);
-  font-weight: 900;
+  font-weight: 800;
   cursor: pointer;
   text-decoration: none;
-  font-size: inherit;
+  font-size: var(--fw-type-body);
   font-family: inherit;
+  min-height: var(--fw-touch-min, 44px);
 }
 
 .shrix-card-link:hover {

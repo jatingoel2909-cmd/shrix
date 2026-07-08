@@ -57,8 +57,8 @@
 .calc-field__input,
 .calc-field__select {
   padding: 16px 18px;
-  min-height: 44px;
-  border-radius: 14px;
+  min-height: var(--fw-touch-min, 44px);
+  border-radius: var(--fw-radius-md);
   border: 1px solid var(--fw-border-strong);
   background: var(--fw-input-bg);
   color: var(--fw-text-primary);

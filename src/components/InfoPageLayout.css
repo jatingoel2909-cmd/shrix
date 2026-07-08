@@ -145,12 +145,12 @@
 .shrix-learn-disclaimer {
   max-width: 820px;
   margin: -24px auto 0;
-  padding: 18px max(32px, calc((100vw - 1280px) / 2));
-  font-size: 14px;
+  padding: 18px var(--fw-space-inline);
+  font-size: var(--fw-type-caption);
   color: var(--fw-text-muted);
   background: rgba(212, 175, 55, 0.06);
   border: 1px solid var(--fw-border);
-  border-radius: 16px;
+  border-radius: var(--fw-radius-md);
 }
 
 .shrix-calculators-disclaimer {

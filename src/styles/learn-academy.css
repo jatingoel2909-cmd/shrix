@@ -126,18 +126,16 @@
 .la-path-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: var(--fw-space-gap);
 }
 
 .la-path-card {
   display: flex;
   flex-direction: column;
   padding: var(--fw-space-card) 30px;
-  border-radius: var(--fw-radius-xl);
   border: 1px solid var(--fw-border-strong);
   background: var(--fw-bg-surface);
   box-shadow: var(--fw-shadow-card);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .la-path-card:hover {
@@ -261,27 +259,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
-  border-radius: 999px;
   border: 1px solid transparent;
-  font-size: 14px;
-  font-weight: 800;
   text-decoration: none;
   cursor: pointer;
-  transition: 0.2s ease;
   width: fit-content;
-}
-
-.la-btn--primary {
-  border-color: var(--fw-border-strong);
-  background: linear-gradient(145deg, var(--fw-accent-bright), var(--fw-accent));
-  color: var(--fw-text-on-accent);
-  box-shadow: var(--fw-shadow-soft);
-}
-
-.la-btn--primary:hover {
-  filter: brightness(1.05);
-  box-shadow: var(--fw-shadow-card);
 }
 
 .la-continue {
