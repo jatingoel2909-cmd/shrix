@@ -1,0 +1,325 @@
+/* FOINWI Phase 3 — premium polish layer */
+
+:root {
+  --fw-radius-sm: 12px;
+  --fw-radius-md: 16px;
+  --fw-radius-lg: 20px;
+  --fw-radius-xl: 24px;
+  --fw-radius-2xl: 28px;
+  --fw-radius-pill: 999px;
+
+  --fw-space-section-y: 96px;
+  --fw-space-section-y-md: 80px;
+  --fw-space-section-y-sm: 64px;
+  --fw-space-inline: max(32px, calc((100vw - 1280px) / 2));
+  --fw-space-inline-sm: 22px;
+  --fw-space-card: 28px;
+  --fw-space-card-sm: 22px;
+  --fw-space-gap: 24px;
+  --fw-space-gap-sm: 16px;
+  --fw-space-stack: 32px;
+
+  --fw-shadow-hover: 0 18px 44px rgba(61, 52, 40, 0.11);
+  --fw-shadow-lift: 0 10px 30px rgba(61, 52, 40, 0.09);
+
+  --fw-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fw-duration: 0.28s;
+  --fw-duration-slow: 0.5s;
+
+  --fw-type-label: 11px;
+  --fw-type-caption: 13px;
+  --fw-type-body: 15px;
+  --fw-type-lead: 17px;
+  --fw-type-h3: 20px;
+  --fw-type-h2: clamp(28px, 3vw, 36px);
+  --fw-type-h1: clamp(32px, 4vw, 46px);
+
+  --fw-icon-sm: 24px;
+  --fw-icon-md: 32px;
+  --fw-icon-lg: 40px;
+
+  --fw-accent-gradient: linear-gradient(145deg, var(--fw-accent-bright) 0%, var(--fw-accent) 100%);
+}
+
+/* Page load */
+.shrix-app {
+  animation: fw-page-enter var(--fw-duration-slow) var(--fw-ease) both;
+}
+
+@keyframes fw-page-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scroll reveal */
+.fw-scroll-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.65s var(--fw-ease) var(--fw-reveal-delay, 0ms),
+    transform 0.65s var(--fw-ease) var(--fw-reveal-delay, 0ms);
+}
+
+.fw-scroll-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shrix-app,
+  .fw-scroll-reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Typography rhythm */
+.shrix-section-label {
+  font-size: var(--fw-type-label);
+  letter-spacing: 1.2px;
+  line-height: 1.4;
+}
+
+/* Navigation active state */
+.shrix-nav-links a {
+  position: relative;
+}
+
+.shrix-nav-links a.shrix-nav-link--active {
+  color: var(--fw-accent);
+}
+
+.shrix-nav-links a.shrix-nav-link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--fw-accent-bright);
+}
+
+.shrix-nav-drawer__links a.shrix-nav-link--active {
+  color: var(--fw-accent);
+  border-color: var(--fw-border);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+/* Unified CTA buttons */
+.shrix-primary,
+.shrix-view-all-btn,
+.la-btn--primary,
+.fhs-btn--primary,
+.shrix-mission-hero__start {
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  transition:
+    transform var(--fw-duration) var(--fw-ease),
+    box-shadow var(--fw-duration) var(--fw-ease),
+    filter var(--fw-duration) var(--fw-ease),
+    background var(--fw-duration) var(--fw-ease),
+    border-color var(--fw-duration) var(--fw-ease),
+    color var(--fw-duration) var(--fw-ease);
+}
+
+.shrix-primary:hover,
+.shrix-view-all-btn:hover,
+.la-btn--primary:hover:not(:disabled),
+.fhs-btn--primary:hover:not(:disabled),
+.shrix-mission-hero__start:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--fw-shadow-hover);
+}
+
+.shrix-secondary,
+.la-btn--ghost,
+.fhs-btn--ghost {
+  transition:
+    transform var(--fw-duration) var(--fw-ease),
+    border-color var(--fw-duration) var(--fw-ease),
+    color var(--fw-duration) var(--fw-ease),
+    background var(--fw-duration) var(--fw-ease);
+}
+
+.shrix-secondary:hover,
+.la-btn--ghost:hover:not(:disabled),
+.fhs-btn--ghost:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+/* Unified badges */
+.shrix-badge,
+.shrix-home-badge,
+.shrix-mission-badge,
+.shrix-info-card__badge,
+.shrix-ai-assistant-preview__badge,
+.shrix-journey-card__duration,
+.la-badge,
+.la-timeline__preview-badge,
+.fhs-score-card__band {
+  font-size: var(--fw-type-label);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+/* Unified icon sizing */
+.shrix-icon,
+.calculator-icon,
+.la-path-card__icon,
+.shrix-journey-card__icon span {
+  line-height: 1;
+}
+
+.shrix-icon,
+.calculator-icon {
+  font-size: var(--fw-icon-md);
+  margin-bottom: var(--fw-space-gap-sm);
+  display: block;
+}
+
+/* Interactive cards — premium lift */
+.shrix-card,
+.calculator-card,
+.shrix-home-card,
+.shrix-journey-card,
+.shrix-trust-card,
+.shrix-info-card,
+.la-path-card,
+.la-timeline__card,
+.la-tool-card,
+.la-more-path,
+.la-continue__card,
+.fhs-intro-card,
+.fhs-question-card,
+.fhs-panel,
+.fhs-suggest-card,
+.shrix-ai-assistant-preview,
+.shrix-ai-preview-card,
+.shrix-mission-block,
+.shrix-dashboard,
+.calc-result-card,
+.calc-result-support__card {
+  transition:
+    transform var(--fw-duration) var(--fw-ease),
+    box-shadow var(--fw-duration) var(--fw-ease),
+    border-color var(--fw-duration) var(--fw-ease),
+    background var(--fw-duration) var(--fw-ease);
+}
+
+.shrix-card:hover,
+.calculator-card:hover,
+.shrix-home-card:hover,
+.shrix-journey-card:hover,
+.shrix-trust-card:hover,
+.shrix-info-card:hover,
+.la-path-card:hover,
+.la-tool-card:hover,
+.la-more-path:hover,
+.shrix-ai-preview-card:hover,
+.shrix-mission-block:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--fw-shadow-hover);
+  border-color: var(--fw-border-strong);
+}
+
+.shrix-card:has(.shrix-card-link),
+.calculator-card:has(a),
+.shrix-home-card:has(a),
+.shrix-journey-card:has(a),
+.la-path-card:has(a) {
+  cursor: pointer;
+}
+
+.shrix-card-link,
+.shrix-journey-card__cta,
+.la-link-btn {
+  transition: color var(--fw-duration) var(--fw-ease);
+}
+
+/* Card links feel tappable */
+.shrix-card-link:hover,
+.shrix-journey-card__cta:hover {
+  color: var(--fw-accent-bright);
+}
+
+/* Chip / pill links */
+.la-chip,
+.la-chip-link,
+.fhs-chip-link,
+.calc-result-support__link,
+.shrix-info-tags li {
+  transition:
+    transform var(--fw-duration) var(--fw-ease),
+    box-shadow var(--fw-duration) var(--fw-ease),
+    border-color var(--fw-duration) var(--fw-ease),
+    color var(--fw-duration) var(--fw-ease);
+}
+
+.la-chip:hover,
+.la-chip-link:hover,
+.fhs-chip-link:hover,
+.calc-result-support__link:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--fw-shadow-lift);
+}
+
+/* Section breathing room */
+.shrix-calculators,
+.shrix-home-section,
+.shrix-journey-section,
+.shrix-ai-preview,
+.shrix-info-page,
+.la-main,
+.fhs-main,
+.shrix-mission-page,
+.calc-layout {
+  scroll-margin-top: 132px;
+}
+
+/* Hero polish */
+.la-hero,
+.fhs-hero,
+.shrix-mission-hero {
+  padding-top: calc(var(--fw-space-section-y) + 12px);
+}
+
+/* Focus visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--fw-accent-bright);
+  outline-offset: 2px;
+}
+
+/* Result cards subtle hover */
+.calc-result-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--fw-shadow-lift);
+}
+
+@media (max-width: 950px) {
+  :root {
+    --fw-space-section-y: var(--fw-space-section-y-md);
+  }
+
+  .shrix-nav-links a.shrix-nav-link--active::after {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  :root {
+    --fw-space-section-y: var(--fw-space-section-y-sm);
+  }
+}

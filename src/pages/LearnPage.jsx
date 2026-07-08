@@ -1,122 +1,72 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import InfoPageLayout from "../components/InfoPageLayout";
 import Footer from "../components/Footer";
+import LearningPathCard from "../components/learn/LearningPathCard";
+import { LEARN_ACADEMY_NOTICE, LEARNING_PATHS } from "../data/learnAcademy";
 import "../styles/global.css";
-
-const lifeStages = [
-  {
-    title: "Kids & Teens",
-    text: "Build early money habits with simple, age-appropriate concepts that make finance feel approachable.",
-    topics: ["Money basics", "Saving", "Needs vs wants", "Simple interest"],
-  },
-  {
-    title: "Students",
-    text: "Prepare for financial independence with practical skills for everyday money decisions and first investments.",
-    topics: ["Banking", "UPI", "Budgeting", "Credit score", "First SIP"],
-  },
-  {
-    title: "Young Professionals",
-    text: "Turn your first salary into a strong foundation with structured planning for savings, protection, and growth.",
-    topics: [
-      "Salary planning",
-      "Emergency fund",
-      "SIP",
-      "Tax saving",
-      "Insurance",
-    ],
-  },
-  {
-    title: "Families",
-    text: "Balance multiple goals — home, education, health, and retirement — with clarity and confidence.",
-    topics: [
-      "Home loan",
-      "Child education",
-      "Retirement",
-      "Health insurance",
-      "Goal planning",
-    ],
-  },
-  {
-    title: "50+ & Retirement",
-    text: "Understand post-work income, corpus planning, and how to manage wealth through retirement years.",
-    topics: ["EPF", "NPS", "Gratuity", "SWP", "Pension", "Passive income"],
-  },
-];
-
-const learningPaths = [
-  {
-    title: "Investing Basics",
-    text: "Learn compounding, risk and return, SIP, lumpsum, and how to evaluate investment choices step by step.",
-  },
-  {
-    title: "Loans & EMI",
-    text: "Understand borrowing costs, EMI structure, prepayment impact, and how to compare loan options wisely.",
-  },
-  {
-    title: "Tax & Salary Planning",
-    text: "Explore salary components, deductions, tax-saving concepts, and how choices affect your take-home pay.",
-  },
-  {
-    title: "Retirement Planning",
-    text: "Estimate retirement needs, plan long-term corpus targets, and explore EPF, NPS, and SWP concepts.",
-  },
-  {
-    title: "Financial Calculators",
-    text: "Use FOINWI calculators to model SIP, EMI, FD, PPF, and goal scenarios with instant, clear results.",
-  },
-];
+import "../styles/learn-academy.css";
 
 function LearnPage() {
+  const featuredPath = LEARNING_PATHS[0];
+  const continuePath = LEARNING_PATHS[1];
+
   return (
     <div className="shrix-app">
       <Navbar />
-      <InfoPageLayout
-        label="Learn"
-        title="Learn Money Your Way"
-        subtitle="Structured education for every life stage — from first savings to retirement planning, built for Indian users."
-      >
-        <section className="shrix-info-section">
-          <h2 className="shrix-info-section__title">Learn by Life Stage</h2>
-          <p className="shrix-info-section__intro">
-            Pick the stage that fits you today. Each path covers the topics that
-            matter most at that point in life.
+
+      <header className="la-hero">
+        <div className="la-hero__inner">
+          <p className="shrix-section-label">FOINWI Learn Academy</p>
+          <h1>Learn Finance Step by Step</h1>
+          <p>
+            Understand money through structured learning paths, practical examples,
+            calculators, and interactive guidance.
           </p>
-          <div className="shrix-info-grid shrix-info-grid--wide">
-            {lifeStages.map((stage) => (
-              <article className="shrix-info-card" key={stage.title}>
-                <h3>{stage.title}</h3>
-                <p>{stage.text}</p>
-                <ul className="shrix-info-tags">
-                  {stage.topics.map((topic) => (
-                    <li key={topic}>{topic}</li>
-                  ))}
-                </ul>
-              </article>
+        </div>
+      </header>
+
+      <main className="la-main">
+        <section className="la-section">
+          <div className="la-section__head">
+            <h2>Learning Paths</h2>
+            <p>
+              Choose a structured track. Each path includes lessons, related FOINWI
+              calculators, and a clear progression from fundamentals to applied topics.
+            </p>
+          </div>
+          <div className="la-path-grid">
+            {LEARNING_PATHS.map((path) => (
+              <LearningPathCard key={path.slug} path={path} />
             ))}
           </div>
         </section>
 
-        <section className="shrix-info-section">
-          <h2 className="shrix-info-section__title">Learning Paths</h2>
-          <p className="shrix-info-section__intro">
-            Follow focused tracks to build confidence in investing, borrowing,
-            taxes, retirement, and using calculators effectively.
-          </p>
-          <div className="shrix-info-grid">
-            {learningPaths.map((path) => (
-              <article className="shrix-info-card" key={path.title}>
-                <h3>{path.title}</h3>
-                <p>{path.text}</p>
-              </article>
-            ))}
+        <section className="la-continue">
+          <div className="la-continue__copy">
+            <p className="shrix-section-label">Continue Learning</p>
+            <h2>Recommended Next Path</h2>
+            <p>
+              Finished exploring {featuredPath.title}? {continuePath.title} builds
+              on those ideas with practical saving and budgeting habits.
+            </p>
+            <Link to={`/learn/${continuePath.slug}`} className="la-btn la-btn--primary">
+              Explore {continuePath.title} →
+            </Link>
           </div>
+          <article className="la-continue__card">
+            <span aria-hidden="true">{continuePath.icon}</span>
+            <h3>{continuePath.title}</h3>
+            <p>{continuePath.description}</p>
+            <ul className="la-continue__stats">
+              <li>{continuePath.duration}</li>
+              <li>{continuePath.difficulty}</li>
+              <li>{continuePath.lessons.length} lessons</li>
+            </ul>
+          </article>
         </section>
-      </InfoPageLayout>
-      <p className="shrix-info-disclaimer shrix-learn-disclaimer">
-        FOINWI learning content is for educational purposes only. It is not financial,
-        tax, investment, loan, or legal advice. Consult qualified professionals
-        before making financial decisions.
-      </p>
+      </main>
+
+      <p className="la-notice">{LEARN_ACADEMY_NOTICE}</p>
       <Footer />
     </div>
   );

@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollReveal from "./components/ScrollReveal";
 import Home from "./pages/Home";
 import SipCalculatorPage from "./pages/SipCalculatorPage";
 import EmiCalculatorPage from "./pages/EmiCalculatorPage";
@@ -16,6 +17,7 @@ import NpsCalculatorPage from "./pages/NpsCalculatorPage";
 import GoalPlannerCalculatorPage from "./pages/GoalPlannerCalculatorPage";
 import CalculatorsPage from "./pages/CalculatorsPage";
 import LearnPage from "./pages/LearnPage";
+import LearnPathPage from "./pages/LearnPathPage";
 import AiToolsPage from "./pages/AiToolsPage";
 import AboutPage from "./pages/AboutPage";
 import RetirementCalculatorPage from "./pages/RetirementCalculatorPage";
@@ -35,10 +37,12 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ScrollReveal />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/calculators" element={<CalculatorsPage />} />
         <Route path="/learn" element={<LearnPage />} />
+        <Route path="/learn/:slug" element={<LearnPathPage />} />
         <Route path="/ai-tools" element={<AiToolsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/financial-health-score" element={<FinancialHealthScorePage />} />

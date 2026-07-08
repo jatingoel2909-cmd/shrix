@@ -1,8 +1,8 @@
 .calc-layout {
-  padding: 90px max(32px, calc((100vw - 1280px) / 2));
+  padding: var(--fw-space-section-y) var(--fw-space-inline);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 56px;
   border-top: 1px solid var(--fw-border);
   align-items: start;
   background: var(--fw-bg-page);
@@ -14,10 +14,10 @@
 }
 
 .calc-layout__header h2 {
-  font-size: clamp(28px, 2.6vw, 34px);
-  margin: 10px 0 16px;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
+  font-size: var(--fw-type-h2);
+  margin: 12px 0 18px;
+  line-height: 1.12;
+  letter-spacing: -0.4px;
   color: var(--fw-text-primary);
 }
 
@@ -145,7 +145,7 @@
 .calc-result-card {
   background: var(--fw-bg-surface);
   border: 1px solid var(--fw-border-strong);
-  border-radius: 20px;
+  border-radius: var(--fw-radius-lg);
   padding: 22px 24px;
   display: flex;
   justify-content: space-between;
@@ -232,7 +232,7 @@
 
 @media (max-width: 620px) {
   .calc-layout {
-    padding: 60px 22px;
+    padding: var(--fw-space-section-y-md) var(--fw-space-inline-sm);
   }
 
   .calc-layout__header h2 {

@@ -1,29 +1,29 @@
 .shrix-journey-section {
-  padding: 88px max(32px, calc((100vw - 1280px) / 2));
+  padding: var(--fw-space-section-y) var(--fw-space-inline);
   background: var(--fw-bg-page-alt);
   text-align: center;
   border-top: 1px solid var(--fw-border);
 }
 
 .shrix-journey-section h2 {
-  font-size: clamp(28px, 3vw, 38px);
-  margin: 10px 0 16px;
+  font-size: var(--fw-type-h2);
+  margin: 12px 0 18px;
   color: var(--fw-text-primary);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
 }
 
 .shrix-journey-section__subtitle {
   color: var(--fw-text-muted);
-  font-size: 18px;
+  font-size: var(--fw-type-lead);
   line-height: 1.7;
   max-width: 720px;
-  margin: 0 auto 48px;
+  margin: 0 auto 52px;
 }
 
 .shrix-journey-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: var(--fw-space-gap);
   text-align: left;
 }
 
@@ -31,19 +31,11 @@
   display: flex;
   flex-direction: column;
   min-height: 280px;
-  padding: 28px 26px 24px;
+  padding: var(--fw-space-card) 26px 24px;
   background: var(--fw-bg-surface);
   border: 1px solid var(--fw-border-strong);
-  border-radius: 22px;
+  border-radius: var(--fw-radius-lg);
   box-shadow: var(--fw-shadow-card);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  animation: shrix-journey-fade-up 0.6s ease both;
-}
-
-.shrix-journey-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--fw-accent-bright);
-  box-shadow: var(--fw-shadow-soft);
 }
 
 .shrix-journey-card__icon {
@@ -52,22 +44,22 @@
   justify-content: center;
   width: 56px;
   height: 56px;
-  margin-bottom: 18px;
-  border-radius: 16px;
+  margin-bottom: 20px;
+  border-radius: var(--fw-radius-md);
   background: linear-gradient(145deg, rgba(255, 250, 245, 0.95) 0%, rgba(243, 232, 216, 0.85) 100%);
   border: 1px solid rgba(201, 162, 39, 0.35);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .shrix-journey-card__icon span {
-  font-size: 28px;
+  font-size: var(--fw-icon-sm);
   line-height: 1;
 }
 
 .shrix-journey-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: var(--fw-text-primary);
-  font-size: 19px;
+  font-size: var(--fw-type-h3);
   letter-spacing: -0.2px;
 }
 
@@ -75,8 +67,8 @@
   flex: 1;
   margin: 0;
   color: var(--fw-text-muted);
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: var(--fw-type-body);
+  line-height: 1.65;
 }
 
 .shrix-journey-card__meta {
@@ -142,7 +134,7 @@
 
 @media (max-width: 650px) {
   .shrix-journey-section {
-    padding: 56px 22px;
+    padding: var(--fw-space-section-y-sm) var(--fw-space-inline-sm);
   }
 
   .shrix-journey-section__subtitle {

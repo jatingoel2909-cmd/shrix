@@ -1,5 +1,5 @@
 .fhs-hero {
-  padding: 100px max(32px, calc((100vw - 1280px) / 2)) 48px;
+  padding: calc(var(--fw-space-section-y) + 12px) var(--fw-space-inline) 48px;
   background: var(--fw-bg-hero);
   border-bottom: 1px solid var(--fw-border);
 }
@@ -9,10 +9,10 @@
 }
 
 .fhs-hero h1 {
-  margin: 10px 0 14px;
-  font-size: clamp(32px, 4vw, 46px);
+  margin: 12px 0 16px;
+  font-size: var(--fw-type-h1);
   line-height: 1.08;
-  letter-spacing: -1px;
+  letter-spacing: -0.6px;
   color: var(--fw-text-primary);
 }
 
@@ -25,7 +25,7 @@
 }
 
 .fhs-main {
-  padding: 48px max(32px, calc((100vw - 1280px) / 2)) 72px;
+  padding: 56px var(--fw-space-inline) 80px;
 }
 
 .fhs-intro-grid {
@@ -628,11 +628,11 @@
 
 @media (max-width: 620px) {
   .fhs-hero {
-    padding: 80px 22px 36px;
+    padding: var(--fw-space-section-y-sm) var(--fw-space-inline-sm) 36px;
   }
 
   .fhs-main {
-    padding: 32px 22px 56px;
+    padding: var(--fw-space-section-y-sm) var(--fw-space-inline-sm) 56px;
   }
 
   .fhs-intro-grid {

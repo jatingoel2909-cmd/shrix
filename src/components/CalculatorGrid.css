@@ -1,57 +1,54 @@
 .calculator-section {
-  padding: 80px 7%;
+  padding: var(--fw-space-section-y-md) 7%;
   background: var(--fw-bg-page-alt);
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 42px;
 }
 
 .section-heading p {
   color: var(--fw-accent);
   font-weight: 900;
   text-transform: uppercase;
+  font-size: var(--fw-type-label);
+  letter-spacing: 1.2px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 48px;
 }
 
 .section-heading h2 {
-  font-size: 44px;
-  margin: 10px 0 0;
+  font-size: var(--fw-type-h2);
+  margin: 12px 0 0;
   color: var(--fw-text-primary);
+  letter-spacing: -0.4px;
 }
 
 .calculator-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: var(--fw-space-gap);
 }
 
 .calculator-card {
   background: var(--fw-bg-surface);
   border: 1px solid var(--fw-border-strong);
-  border-radius: 26px;
-  padding: 28px;
-  transition: 0.3s ease;
+  border-radius: var(--fw-radius-xl);
+  padding: var(--fw-space-card);
   box-shadow: var(--fw-shadow-card);
-}
-
-.calculator-card:hover {
-  transform: translateY(-8px);
-  border-color: var(--fw-accent-bright);
-}
-
-.calculator-icon {
-  font-size: 32px;
 }
 
 .calculator-card h3 {
   color: var(--fw-accent);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: var(--fw-type-h3);
+  letter-spacing: -0.2px;
 }
 
 .calculator-card p {
   color: var(--fw-text-muted);
-  line-height: 1.6;
+  line-height: 1.65;
+  font-size: var(--fw-type-body);
+  margin: 0;
 }
 
 .calculator-card button {
@@ -82,10 +79,10 @@
 
 .shrix-calculators__subtitle {
   color: var(--fw-text-muted);
-  font-size: 18px;
+  font-size: var(--fw-type-lead);
   line-height: 1.65;
   max-width: 720px;
-  margin: 0 auto 46px;
+  margin: 0 auto 52px;
 }
 
 .shrix-calculators--home {
@@ -104,20 +101,19 @@
 
 .shrix-view-all-btn {
   display: inline-block;
-  padding: 16px 32px;
-  border-radius: 16px;
+  padding: 14px 28px;
+  border-radius: var(--fw-radius-pill);
   border: 1px solid var(--fw-border-strong);
   color: var(--fw-accent);
-  font-weight: 900;
+  font-weight: 800;
+  font-size: var(--fw-type-body);
   text-decoration: none;
-  transition: 0.25s ease;
 }
 
 .shrix-view-all-btn:hover {
   color: var(--fw-text-on-accent);
-  background: linear-gradient(135deg, #c9a227, #d4af37);
+  background: var(--fw-accent-gradient);
   border-color: var(--fw-accent-bright);
-  transform: translateY(-2px);
 }
 
 @media (max-width: 1000px) {
