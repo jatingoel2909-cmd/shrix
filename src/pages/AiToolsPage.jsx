@@ -1,77 +1,84 @@
 import Navbar from "../components/Navbar";
-import InfoPageLayout from "../components/InfoPageLayout";
 import Footer from "../components/Footer";
+import AiGuideHero from "../components/ai/AiGuideHero";
+import FinancialGoalCard from "../components/ai/FinancialGoalCard";
+import AiGuideCard from "../components/ai/AiGuideCard";
+import DailyAiInsight from "../components/ai/DailyAiInsight";
+import AiRoadmap from "../components/ai/AiRoadmap";
+import AiContinueLearning from "../components/ai/AiContinueLearning";
+import AiVisionSection from "../components/ai/AiVisionSection";
+import {
+  AI_GUIDE_DISCLAIMER,
+  AI_GUIDES,
+  AI_VISION,
+  CONTINUE_LEARNING,
+  DAILY_AI_INSIGHT,
+  FINANCIAL_GOALS,
+} from "../data/aiGuide";
 import "../styles/global.css";
-
-const tools = [
-  {
-    title: "AI Money Guide",
-    text: "Educational prompts on budgeting, saving habits, and building a stronger financial foundation.",
-  },
-  {
-    title: "AI SIP Planner",
-    text: "Explore SIP amounts, tenures, and goal alignment with structured, educational prompts.",
-  },
-  {
-    title: "AI Financial Explainer",
-    text: "Get plain-language explanations of financial terms, products, and calculator results.",
-  },
-  {
-    title: "AI Loan Guide",
-    text: "Understand loan options, EMI impact, and repayment scenarios with guided comparisons.",
-  },
-  {
-    title: "AI Tax Helper",
-    text: "Explore tax-related concepts and salary planning questions with clear, educational support.",
-  },
-  {
-    title: "AI Retirement Planner",
-    text: "Plan retirement milestones with structured insights tailored to Indian savings and pension products.",
-  },
-  {
-    title: "AI Expense Analyzer",
-    text: "Review spending patterns and identify opportunities to save without complex spreadsheets.",
-  },
-  {
-    title: "AI Investment Comparator",
-    text: "Compare investment scenarios side by side to understand risk, return, and trade-offs.",
-  },
-  {
-    title: "AI Goal Planner",
-    text: "Break down long-term goals — education, home, retirement — into actionable planning steps.",
-  },
-  {
-    title: "AI Wealth Health Score",
-    text: "Get a snapshot view of your financial readiness across savings, protection, and planning.",
-  },
-];
+import "../styles/ai-guide.css";
 
 function AiToolsPage() {
   return (
     <div className="shrix-app">
       <Navbar />
-      <InfoPageLayout
-        label="AI Tools"
-        title="The FOINWI AI Roadmap"
-        subtitle="Planned AI-powered tools to help you understand money decisions with clarity — built for education, not automation of advice."
-        variant="alt"
-      >
-        <p className="shrix-info-disclaimer">
-          These tools are planned for educational guidance only. They are not live,
-          are not financial, tax, investment, or loan advice, and will not replace
-          qualified professionals.
-        </p>
+      <AiGuideHero />
 
-        <div className="shrix-info-grid shrix-info-grid--wide">
-          {tools.map((tool) => (
-            <article className="shrix-info-card" key={tool.title}>
-              <h3>{tool.title}</h3>
-              <p>{tool.text}</p>
-              <span className="shrix-info-card__badge">Coming Soon</span>
-            </article>
-          ))}
-        </div>
-      </InfoPageLayout>
+      <main className="ai-main">
+        <section className="ai-section" id="ai-goals" aria-labelledby="ai-goals-title">
+          <div className="ai-section__head">
+            <p className="shrix-section-label">Your Goals</p>
+            <h2 id="ai-goals-title">Financial Goals</h2>
+            <p>
+              Choose a goal and FOINWI AI will connect learning paths, calculators,
+              missions, and financial understanding into one guided experience.
+            </p>
+          </div>
+          <div className="ai-goals-grid">
+            {FINANCIAL_GOALS.map((goal) => (
+              <FinancialGoalCard key={goal.id} goal={goal} />
+            ))}
+          </div>
+        </section>
+
+        <section className="ai-section" aria-labelledby="ai-guides-title">
+          <div className="ai-section__head">
+            <p className="shrix-section-label">Guided Learning</p>
+            <h2 id="ai-guides-title">AI Guides</h2>
+            <p>
+              Structured educational guides that explain concepts, link to lessons,
+              and point you toward the right calculators and missions.
+            </p>
+          </div>
+          <div className="ai-guides-grid">
+            {AI_GUIDES.map((guide) => (
+              <AiGuideCard key={guide.id} guide={guide} />
+            ))}
+          </div>
+        </section>
+
+        <section className="ai-section ai-section--flush" aria-label="Daily insight">
+          <DailyAiInsight insight={DAILY_AI_INSIGHT} />
+        </section>
+
+        <section className="ai-section" aria-labelledby="ai-roadmap-title">
+          <div className="ai-section__head">
+            <p className="shrix-section-label">Product Roadmap</p>
+            <h2 id="ai-roadmap-title">AI Roadmap</h2>
+            <p>
+              See what you can use today, what is being built next, and where
+              FOINWI AI is heading over time.
+            </p>
+          </div>
+          <AiRoadmap />
+        </section>
+
+        <AiContinueLearning config={CONTINUE_LEARNING} />
+
+        <AiVisionSection vision={AI_VISION} />
+      </main>
+
+      <p className="ai-notice">{AI_GUIDE_DISCLAIMER}</p>
       <Footer />
     </div>
   );

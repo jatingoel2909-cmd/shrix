@@ -26,6 +26,12 @@ const REVEAL_SELECTORS = [
   ".fhs-suggest-card",
   ".calc-result-support__card",
   ".calc-result-support",
+  ".ai-goal-card",
+  ".ai-guide-card",
+  ".ai-insight",
+  ".ai-roadmap__item",
+  ".ai-continue",
+  ".ai-vision",
 ].join(",");
 
 function ScrollReveal() {

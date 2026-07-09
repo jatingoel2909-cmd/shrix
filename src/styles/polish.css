@@ -176,6 +176,9 @@ h3 {
 .fhs-btn,
 .fhs-btn--primary,
 .fhs-btn--ghost,
+.ai-btn,
+.ai-btn--primary,
+.ai-btn--ghost,
 .shrix-mission-hero__start,
 .shrix-mission-next__btn {
   font-family: inherit;
@@ -198,6 +201,7 @@ h3 {
 .shrix-view-all-btn,
 .la-btn--primary,
 .fhs-btn--primary,
+.ai-btn--primary,
 .shrix-mission-hero__start,
 .shrix-mission-next__btn {
   background: var(--fw-accent-gradient);
@@ -208,7 +212,8 @@ h3 {
 
 .shrix-secondary,
 .la-btn--ghost,
-.fhs-btn--ghost {
+.fhs-btn--ghost,
+.ai-btn--ghost {
   background: transparent;
   border: 1px solid var(--fw-border-strong);
   color: var(--fw-text-primary);
@@ -218,6 +223,7 @@ h3 {
 .shrix-view-all-btn:hover,
 .la-btn--primary:hover:not(:disabled),
 .fhs-btn--primary:hover:not(:disabled),
+.ai-btn--primary:hover:not(:disabled),
 .shrix-mission-hero__start:hover,
 .shrix-mission-next__btn:hover {
   transform: translateY(-2px);
@@ -226,7 +232,8 @@ h3 {
 
 .shrix-secondary:hover,
 .la-btn--ghost:hover:not(:disabled),
-.fhs-btn--ghost:hover:not(:disabled) {
+.fhs-btn--ghost:hover:not(:disabled),
+.ai-btn--ghost:hover:not(:disabled) {
   transform: translateY(-1px);
   border-color: var(--fw-accent-bright);
   color: var(--fw-accent);
@@ -355,7 +362,13 @@ h3 {
 .shrix-dashboard,
 .calc-result-card,
 .calc-result-support__card,
-.calc-formula {
+.calc-formula,
+.ai-goal-card,
+.ai-guide-card,
+.ai-insight,
+.ai-roadmap__item,
+.ai-continue,
+.ai-vision {
   border-radius: var(--fw-radius-lg);
   transition:
     transform var(--fw-duration) var(--fw-ease),
@@ -378,6 +391,8 @@ h3 {
 .shrix-trust-card:hover,
 .shrix-info-card:hover,
 .la-path-card:hover,
+.ai-goal-card:hover,
+.ai-guide-card:hover,
 .la-tool-card:hover,
 .la-more-path:hover,
 .shrix-ai-preview-card:hover,
