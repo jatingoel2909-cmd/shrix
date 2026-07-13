@@ -10,6 +10,7 @@ import JourneyMissionLink from "../components/journey-engine/JourneyMissionLink"
 import JourneyHealthScore from "../components/journey-engine/JourneyHealthScore";
 import JourneyCompletion from "../components/journey-engine/JourneyCompletion";
 import JourneyNextRecommendation from "../components/journey-engine/JourneyNextRecommendation";
+import IntelligenceSection from "../components/intelligence/IntelligenceSection";
 import { JOURNEY_ENGINE_DISCLAIMER } from "../data/financialJourneyEngine";
 import {
   calculateJourneyProgress,
@@ -71,6 +72,13 @@ function FinancialJourneyPage({ journey }) {
         />
         <JourneyModules modules={modules} />
         <JourneyCalculators calculators={calculators} />
+        <IntelligenceSection
+          pathname={`/journeys/${journey.slug}`}
+          conceptId="goal-planning"
+          difficulty="beginner"
+          compact
+          className="fi-intelligence-section--journey"
+        />
         <JourneyMissionLink mission={mission} />
         <JourneyHealthScore healthScore={journey.healthScore} />
         {complete && <JourneyCompletion completion={journey.completion} />}

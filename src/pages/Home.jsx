@@ -9,6 +9,7 @@ import { getPopularCalculators } from "../data/calculators";
 import AiToolsPreviewSection from "../components/home/AiToolsPreviewSection";
 import LearnPreviewSection from "../components/home/LearnPreviewSection";
 import HomeClaritySection from "../components/home/HomeClaritySection";
+import IntelligenceSection from "../components/intelligence/IntelligenceSection";
 import Footer from "../components/Footer";
 import { scrollToSection } from "../utils/homeNavigation";
 import "../styles/global.css";
@@ -39,6 +40,7 @@ function Home() {
         showViewAll
         className="shrix-calculators--home"
       />
+      <IntelligenceSection pathname="/" className="fi-intelligence-section--home" />
       <AiToolsPreviewSection />
       <LearnPreviewSection />
       <HomeClaritySection />

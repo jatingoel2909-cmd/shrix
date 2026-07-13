@@ -5,12 +5,11 @@ import ExploreGoalCard from "../components/guide/ExploreGoalCard";
 import GuideLearningCard from "../components/guide/GuideLearningCard";
 import GuideToolCard from "../components/guide/GuideToolCard";
 import GuideHabitCard from "../components/guide/GuideHabitCard";
-import GuideDailyInsight from "../components/guide/GuideDailyInsight";
 import GuideFutureTimeline from "../components/guide/GuideFutureTimeline";
+import DailyInsightCard from "../components/intelligence/DailyInsightCard";
 import { getLearningPathBySlug } from "../data/learnAcademy";
 import { ALL_CALCULATORS } from "../data/calculators";
 import {
-  DAILY_FINANCIAL_INSIGHT,
   EXPLORE_GOALS,
   FEATURED_LEARNING_SLUGS,
   FEATURED_TOOL_PATHS,
@@ -66,7 +65,7 @@ function AiToolsPage() {
         </section>
 
         <section className="guide-section guide-section--compact" aria-label="Daily financial insight">
-          <GuideDailyInsight insight={DAILY_FINANCIAL_INSIGHT} />
+          <DailyInsightCard pathname="/ai-tools" />
         </section>
 
         <section className="guide-section" aria-labelledby="guide-tools-title">

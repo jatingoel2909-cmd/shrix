@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import LearningPathCard from "../components/learn/LearningPathCard";
+import IntelligenceSection from "../components/intelligence/IntelligenceSection";
 import { LEARN_ACADEMY_NOTICE, LEARNING_PATHS } from "../data/learnAcademy";
 import "../styles/global.css";
 import "../styles/learn-academy.css";
@@ -40,6 +41,12 @@ function LearnPage() {
             ))}
           </div>
         </section>
+
+        <IntelligenceSection
+          pathname="/learn"
+          difficulty="beginner"
+          className="fi-intelligence-section--learn"
+        />
 
         <section className="la-continue">
           <div className="la-continue__copy">

@@ -31,6 +31,7 @@ const REVEAL_SELECTORS = [
   ".guide-tool-card",
   ".guide-habit-card",
   ".guide-daily-insight",
+  ".fi-daily-insight",
   ".guide-timeline",
   ".guide-hero__visual",
   ".guide-hero__content",
