@@ -11,6 +11,7 @@ import JourneyHealthScore from "../components/journey-engine/JourneyHealthScore"
 import JourneyCompletion from "../components/journey-engine/JourneyCompletion";
 import JourneyNextRecommendation from "../components/journey-engine/JourneyNextRecommendation";
 import IntelligenceSection from "../components/intelligence/IntelligenceSection";
+import RecommendationPanel from "../components/intelligence/RecommendationPanel";
 import { JOURNEY_ENGINE_DISCLAIMER } from "../data/financialJourneyEngine";
 import {
   calculateJourneyProgress,
@@ -83,6 +84,14 @@ function FinancialJourneyPage({ journey }) {
         <JourneyHealthScore healthScore={journey.healthScore} />
         {complete && <JourneyCompletion completion={journey.completion} />}
         <JourneyNextRecommendation nextJourney={journey.nextJourney} />
+        <RecommendationPanel
+          pathname={`/journeys/${journey.slug}`}
+          journeySlug={journey.slug}
+          conceptId="goal-planning"
+          sourceType="journey"
+          className="fi-rec-panel--journey"
+          compact
+        />
       </main>
 
       <p className="fje-disclaimer">{JOURNEY_ENGINE_DISCLAIMER}</p>

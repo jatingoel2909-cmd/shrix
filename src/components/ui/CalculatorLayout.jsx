@@ -1,6 +1,7 @@
 import CalculatorExplainEngine from "./CalculatorExplainEngine";
 import CalculatorResultSupport from "./CalculatorResultSupport";
 import ContinueJourneyCard from "./ContinueJourneyCard";
+import RecommendationPanel from "../intelligence/RecommendationPanel";
 import { getCalculatorExplain } from "../../data/calculatorExplains";
 import { getCalculatorInsights } from "../../data/calculatorInsights";
 import "./calculator-ui.css";
@@ -51,6 +52,16 @@ function CalculatorLayout({
       )}
 
       {calculatorId ? <ContinueJourneyCard calculatorId={calculatorId} /> : null}
+
+      {calculatorId ? (
+        <RecommendationPanel
+          calculatorPath={calculatorId}
+          pathname={calculatorId}
+          sourceType="calculator"
+          className="fi-rec-panel--calc"
+          compact
+        />
+      ) : null}
     </section>
   );
 }

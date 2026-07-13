@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { useMemo } from "react";
 import CircularScore from "./CircularScore";
+import RecommendationPanel from "../intelligence/RecommendationPanel";
 import { HEALTH_SCORE_DISCLAIMER } from "../../data/healthScoreQuestions";
 
 function CategoryBar({ label, icon, score }) {
@@ -33,6 +35,12 @@ function HealthScoreDashboard({ result, onRetake }) {
     suggestedCalculators,
     suggestedLearn,
   } = result;
+
+  const focusHealthTopic = useMemo(() => {
+    if (!categoryScores?.length) return "savings";
+    const lowest = [...categoryScores].sort((a, b) => a.score - b.score)[0];
+    return lowest?.id ?? "savings";
+  }, [categoryScores]);
 
   return (
     <div className="fhs-dashboard">
@@ -137,6 +145,14 @@ function HealthScoreDashboard({ result, onRetake }) {
           </div>
         </section>
       </div>
+
+      <RecommendationPanel
+        pathname="/financial-health-score"
+        healthTopic={focusHealthTopic}
+        sourceType="health-score"
+        className="fi-rec-panel--health"
+        compact
+      />
 
       <p className="fhs-disclaimer">{HEALTH_SCORE_DISCLAIMER}</p>
     </div>

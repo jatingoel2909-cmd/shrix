@@ -3,6 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { getMissionBySlug } from "../utils/missionHelpers";
+import RecommendationPanel from "../components/intelligence/RecommendationPanel";
 import "../styles/global.css";
 import "../styles/journey.css";
 
@@ -221,6 +222,15 @@ function MissionJourneyPage({ slug }) {
             </div>
           </section>
         )}
+
+        <RecommendationPanel
+          pathname={`/journeys/${mission.slug}`}
+          journeySlug={mission.slug}
+          missionSlug={mission.slug}
+          sourceType="mission"
+          className="fi-rec-panel--journey"
+          compact
+        />
       </main>
 
       <p className="shrix-mission-page-disclaimer">

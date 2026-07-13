@@ -2,6 +2,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import LessonTimeline from "../components/learn/LessonTimeline";
+import RecommendationPanel from "../components/intelligence/RecommendationPanel";
 import {
   getLearningPathBySlug,
   LEARN_ACADEMY_NOTICE,
@@ -139,6 +140,14 @@ function LearnPathPage() {
             </div>
           </section>
         )}
+
+        <RecommendationPanel
+          pathname={`/learn/${path.slug}`}
+          lessonSlug={path.slug}
+          sourceType="lesson"
+          difficulty={path.difficulty?.toLowerCase()}
+          className="fi-rec-panel--learn"
+        />
 
         <section className="la-more-paths">
           <h2>Explore Other Paths</h2>
