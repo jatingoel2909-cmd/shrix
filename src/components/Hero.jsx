@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
     <section className="shrix-hero">
@@ -9,6 +11,21 @@ function Hero() {
           <span className="shrix-hero-headline">Grow Beyond</span>{" "}
           <span>Numbers.</span>
         </h1>
+
+        <p className="shrix-hero-text">
+          Learn finance with clarity through educational calculators, structured
+          learning, guided journeys, and practical insights — so you understand
+          before you decide.
+        </p>
+
+        <div className="shrix-hero-actions">
+          <Link to="/#journeys" className="shrix-primary shrix-hero-cta-link">
+            Start Your Journey
+          </Link>
+          <Link to="/calculators" className="shrix-secondary shrix-hero-cta-link">
+            Explore Calculators
+          </Link>
+        </div>
       </div>
 
       <div className="shrix-dashboard">

@@ -12,10 +12,10 @@ function LearnPreviewSection() {
   return (
     <section className="shrix-home-section" id="learn-preview">
       <p className="shrix-section-label">Learn</p>
-      <h2>Learn Finance Step by Step</h2>
+      <h2>Continue with Structured Learning</h2>
       <p className="shrix-home-section__subtitle">
-        From money basics to investing, loans, tax, and retirement, FOINWI offers
-        educational content to help users learn finance in simple language.
+        After calculators and insights, deepen the fundamentals — money basics,
+        investing, loans, tax, and retirement — in plain language.
       </p>
       <div className="shrix-home-paths">
         {learningPaths.map((path) => (

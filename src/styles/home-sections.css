@@ -142,8 +142,78 @@
   text-align: center;
 }
 
+.shrix-section-bridge {
+  margin: 40px auto 0;
+  max-width: 640px;
+  color: var(--fw-text-secondary);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.shrix-section-bridge--on-alt {
+  margin-top: 48px;
+}
+
+.shrix-why-section {
+  background: var(--fw-bg-page);
+  border-top: 1px solid var(--fw-border);
+}
+
+.shrix-why-card {
+  min-height: 220px;
+  position: relative;
+}
+
+.shrix-why-card__step {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--fw-accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.shrix-why-card h3 {
+  font-size: clamp(18px, 1.6vw, 20px);
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+.shrix-pillars-section {
+  border-top: 1px solid var(--fw-border);
+}
+
+.shrix-pillar-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.shrix-pillar-card__step {
+  color: var(--fw-accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.shrix-pillar-card__arrow {
+  color: var(--fw-accent-bright);
+  font-size: 16px;
+  font-weight: 800;
+  opacity: 0.7;
+}
+
+.shrix-pillar-card h3 {
+  margin-bottom: 10px;
+}
+
 .shrix-calculators--home {
   margin-top: 0;
+  border-top: 1px solid var(--fw-border);
 }
 
 .shrix-ai-preview {
@@ -322,6 +392,10 @@
   .shrix-home-grid--4,
   .shrix-home-grid--3 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shrix-pillar-card__arrow {
+    display: none;
   }
 }
 

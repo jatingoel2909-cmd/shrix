@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 const REVEAL_SELECTORS = [
   ".shrix-home-section",
   ".shrix-home-card",
+  ".shrix-why-card",
+  ".shrix-pillar-card",
   ".shrix-journey-card",
   ".shrix-card",
   ".calculator-card",

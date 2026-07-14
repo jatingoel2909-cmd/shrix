@@ -11,6 +11,40 @@
   border-bottom: 1px solid var(--fw-border, rgba(166, 124, 0, 0.2));
 }
 
+.fi-intelligence-section--home-featured {
+  padding: calc(var(--fw-space-section-y, 56px) * 1.2) var(--fw-space-inline, 24px);
+}
+
+.fi-intelligence-section--home-featured .fi-intelligence-section__inner {
+  max-width: 1040px;
+}
+
+.fi-intelligence-section--home-featured .fi-daily-insight {
+  padding: 32px 36px;
+  box-shadow: var(--fw-shadow-soft, 0 10px 32px rgba(61, 52, 40, 0.08));
+}
+
+.fi-intelligence-section--home-featured .fi-daily-insight h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.fi-intelligence-section--home-featured .fi-daily-insight__summary {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 720px;
+  margin-bottom: 22px;
+}
+
+.fi-intelligence-section--home-featured .fi-daily-insight__cta {
+  font-size: 15px;
+}
+
+.fi-intelligence-section--home-featured .fi-daily-insight__time {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
 .fi-intelligence-section--guide {
   padding: 0;
   background: transparent;
@@ -135,6 +169,22 @@
 @media (max-width: 720px) {
   .fi-intelligence-section {
     padding: 40px 16px;
+  }
+
+  .fi-intelligence-section--home-featured {
+    padding: 48px 16px;
+  }
+
+  .fi-intelligence-section--home-featured .fi-daily-insight {
+    padding: 24px 20px;
+  }
+
+  .fi-intelligence-section--home-featured .fi-daily-insight h3 {
+    font-size: 20px;
+  }
+
+  .fi-intelligence-section--home-featured .fi-daily-insight__summary {
+    font-size: 15px;
   }
 
   .fi-intelligence-section--journey {

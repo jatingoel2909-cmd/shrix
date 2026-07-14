@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import WhyFoinwiSection from "../components/home/WhyFoinwiSection";
 import FourPillarsSection from "../components/home/FourPillarsSection";
 import FinancialJourneysSection from "../components/home/FinancialJourneysSection";
 import CalculatorGrid from "../components/CalculatorGrid";
@@ -30,17 +31,21 @@ function Home() {
     <div className="shrix-app">
       <Navbar />
       <Hero />
+      <WhyFoinwiSection />
       <FinancialJourneysSection />
       <FourPillarsSection />
       <CalculatorGrid
         calculators={getPopularCalculators({ shortTitles: true })}
         showSectionLabel={false}
-        title="Popular Financial Calculators"
-        subtitle="Start with the tools most Indian users need for investment, loans, savings, tax, and retirement planning."
+        title="Start with Useful Calculators"
+        subtitle="Practice the Calculate step — estimate SIP, EMI, savings, tax, and retirement scenarios with clear educational tools."
         showViewAll
         className="shrix-calculators--home"
       />
-      <IntelligenceSection pathname="/" className="fi-intelligence-section--home" />
+      <IntelligenceSection
+        pathname="/"
+        className="fi-intelligence-section--home fi-intelligence-section--home-featured"
+      />
       <AiToolsPreviewSection />
       <LearnPreviewSection />
       <HomeClaritySection />
