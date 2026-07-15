@@ -5,8 +5,7 @@ function Hero() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
-  const handleStartJourney = (event) => {
-    event.preventDefault();
+  const handleStartJourney = () => {
     navigateToHomeSection(navigate, pathname, "journeys");
   };
 
@@ -28,13 +27,13 @@ function Hero() {
         </p>
 
         <div className="shrix-hero-actions">
-          <a
-            href="/#journeys"
+          <button
+            type="button"
             className="shrix-primary shrix-hero-cta-link"
             onClick={handleStartJourney}
           >
             Start Your Journey
-          </a>
+          </button>
           <Link to="/calculators" className="shrix-secondary shrix-hero-cta-link">
             Explore Calculators
           </Link>

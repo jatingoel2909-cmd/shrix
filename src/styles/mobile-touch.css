@@ -1,0 +1,211 @@
+/* FOINWI — mobile browser touch reliability (bug-fix only) */
+
+/* Faster taps, no double-tap zoom delay on controls */
+button,
+a,
+label,
+[role="button"],
+[role="option"],
+.shrix-nav-toggle,
+.shrix-nav-search,
+.shrix-nav-drawer__search,
+.shrix-nav-overlay,
+.fi-search-chip,
+.fi-search-command__close,
+.fi-search-input__clear,
+.fi-search-suggest__list button,
+.fi-search-card,
+.calc-explain__header,
+.calc-explain__accordion-trigger,
+.fhs-option,
+.fhs-btn,
+.shrix-primary,
+.shrix-secondary,
+.shrix-card-link,
+.shrix-journey-card__cta,
+.guide-explore-card,
+.la-btn,
+.la-chip,
+.fi-rec-card__cta {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(166, 124, 0, 0.14);
+}
+
+/* Disable hover lift on touch — first tap should activate, not hover */
+@media (hover: none), (pointer: coarse) {
+  .shrix-card:hover,
+  .calculator-card:hover,
+  .shrix-home-card:hover,
+  .shrix-journey-card:hover,
+  .shrix-trust-card:hover,
+  .shrix-info-card:hover,
+  .la-path-card:hover,
+  .guide-explore-card:hover,
+  .guide-learning-card:hover,
+  .guide-tool-card:hover,
+  .guide-habit-card:hover,
+  .guide-daily-insight:hover,
+  .fje-module-card:hover,
+  .fje-calc-card:hover,
+  .fje-next__card:hover,
+  .la-tool-card:hover,
+  .la-more-path:hover,
+  .shrix-ai-preview-card:hover,
+  .shrix-mission-block:hover,
+  .shrix-mission-calc-card:hover,
+  .fi-rec-card:hover,
+  .fi-search-card:hover,
+  .calc-result-card:hover,
+  .fi-daily-insight:hover,
+  .shrix-primary:hover,
+  .shrix-secondary:hover,
+  .shrix-view-all-btn:hover,
+  .shrix-card-link:hover,
+  .shrix-journey-card__cta:hover,
+  .shrix-footer-social a:hover,
+  .fje-btn--primary:hover,
+  .shrix-mission-hero__start:hover,
+  .shrix-mission-next__btn:hover {
+    transform: none !important;
+  }
+}
+
+/* Minimum 44px touch targets */
+.shrix-nav-search,
+.shrix-nav-toggle,
+.fi-search-command__close,
+.fi-search-input__clear,
+.shrix-footer__links a {
+  min-width: var(--fw-touch-min, 44px);
+  min-height: var(--fw-touch-min, 44px);
+}
+
+.fhs-option {
+  min-height: var(--fw-touch-min, 44px);
+}
+
+.calc-explain__header,
+.calc-explain__accordion-trigger {
+  min-height: var(--fw-touch-min, 44px);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.calc-explain__accordion-icon {
+  pointer-events: none;
+}
+
+/* Recommendation card — full card tap via stretched link */
+.fi-rec-card {
+  position: relative;
+}
+
+.fi-rec-card__cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Search result rows — inherit button reset from search-ui.css */
+button.fi-search-card.fi-search-card--active,
+button.fi-search-card:focus-visible {
+  border-color: var(--fw-accent, #a67c00);
+  background: rgba(166, 124, 0, 0.08);
+  box-shadow: var(--fw-shadow-card, 0 6px 22px rgba(61, 52, 40, 0.07));
+  outline: none;
+}
+
+/* Overlay scroll + keyboard */
+.fi-search-overlay {
+  overscroll-behavior: contain;
+}
+
+.fi-search-results {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fi-search-overlay__dialog {
+  pointer-events: auto;
+}
+
+/* Reduce mobile blur jank */
+@media (max-width: 1023px) {
+  .shrix-navbar,
+  .shrix-nav-drawer,
+  .fi-search-overlay__backdrop {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .shrix-nav-drawer {
+    padding: max(96px, calc(env(safe-area-inset-top, 0px) + 72px)) 28px
+      max(32px, env(safe-area-inset-bottom, 0px));
+  }
+
+  .fi-search-overlay__dialog {
+    max-height: 100dvh;
+    height: 100dvh;
+  }
+
+  .fi-search-command {
+    max-height: 100dvh;
+    height: 100dvh;
+  }
+}
+
+/* Narrow viewport overflow fixes */
+@media (max-width: 430px) {
+  .shrix-hero-headline {
+    white-space: normal;
+  }
+
+  .foinwi-wordmark {
+    letter-spacing: 2px;
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  .shrix-footer__links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+  }
+
+  .shrix-footer__contact {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .fi-rec-group__grid,
+  .shrix-grid,
+  .shrix-home-grid,
+  .shrix-journey-grid {
+    min-width: 0;
+  }
+
+  .fje-timeline,
+  .la-timeline,
+  .guide-timeline {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .fi-rec-panel__inner,
+  .fi-rec-card__title,
+  .fi-rec-card__explanation {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
+
+@media (max-width: 360px) {
+  .shrix-hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .shrix-nav-drawer {
+    width: min(300px, 92vw);
+  }
+}

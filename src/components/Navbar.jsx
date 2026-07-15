@@ -40,11 +40,18 @@ function Navbar() {
   }, [pathname]);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen]);
+    const shouldLock = menuOpen || searchOpen;
+
+    if (shouldLock) {
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }
+
+    document.body.style.overflow = "";
+    return undefined;
+  }, [menuOpen, searchOpen]);
 
   return (
     <header className={`shrix-navbar${menuOpen ? " shrix-navbar--menu-open" : ""}`}>

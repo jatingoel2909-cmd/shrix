@@ -68,7 +68,9 @@
 .fi-search-command__close {
   flex-shrink: 0;
   margin-top: 2px;
-  padding: 6px 10px;
+  min-width: var(--fw-touch-min, 44px);
+  min-height: var(--fw-touch-min, 44px);
+  padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid var(--fw-border, rgba(166, 124, 0, 0.2));
   background: rgba(166, 124, 0, 0.08);
@@ -89,6 +91,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  min-height: var(--fw-touch-min, 44px);
   padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid var(--fw-border-strong, rgba(201, 162, 39, 0.4));
@@ -143,8 +146,8 @@
 }
 
 .fi-search-input__clear {
-  width: 28px;
-  height: 28px;
+  width: var(--fw-touch-min, 44px);
+  height: var(--fw-touch-min, 44px);
   border: 0;
   border-radius: 999px;
   background: rgba(92, 79, 66, 0.1);
@@ -203,6 +206,7 @@
 
 .fi-search-suggest__list button {
   width: 100%;
+  min-height: var(--fw-touch-min, 44px);
   text-align: left;
   padding: 10px 12px;
   border-radius: 12px;
@@ -240,8 +244,11 @@
   border-radius: 14px;
   border: 1px solid var(--fw-border, rgba(166, 124, 0, 0.2));
   background: rgba(255, 252, 247, 0.92);
-  text-decoration: none;
   color: inherit;
+  font: inherit;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
   transition:
     border-color 0.2s ease,
     background 0.2s ease,

@@ -3,7 +3,7 @@
  * Uses searchFOINWI() only. No engine changes. No persistence.
  */
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { searchFOINWI } from "../../intelligence/search/searchEngine.js";
 import SearchOverlay from "./SearchOverlay";
@@ -32,12 +32,13 @@ function SearchCommandCenter({ open, onClose }) {
   const navigate = useNavigate();
   const inputRef = useRef(null);
   const [query, setQuery] = useState("");
+  const deferredQuery = useDeferredValue(query);
   const [activeIndex, setActiveIndex] = useState(-1);
 
   const response = useMemo(() => {
-    if (!query.trim()) return null;
-    return searchFOINWI(query, { limit: 24 });
-  }, [query]);
+    if (!deferredQuery.trim()) return null;
+    return searchFOINWI(deferredQuery, { limit: 24 });
+  }, [deferredQuery]);
 
   const flatResults = useMemo(
     () => (response ? flattenSearchGroups(response.groupedResults) : []),
@@ -84,16 +85,10 @@ function SearchCommandCenter({ open, onClose }) {
     if (!open) return undefined;
 
     const frame = requestAnimationFrame(() => {
-      inputRef.current?.focus();
+      inputRef.current?.focus({ preventScroll: true });
     });
 
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      cancelAnimationFrame(frame);
-      document.body.style.overflow = previousOverflow;
-    };
+    return () => cancelAnimationFrame(frame);
   }, [open]);
 
   const handleQueryChange = (value) => {

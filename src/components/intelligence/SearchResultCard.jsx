@@ -2,8 +2,6 @@
  * FOINWI Command Center — search result card.
  */
 
-import { Link } from "react-router-dom";
-
 const TYPE_ICONS = {
   concept: "💡",
   calculator: "🧮",
@@ -33,13 +31,13 @@ function SearchResultCard({ item, active = false, id, onSelect }) {
   const reason = formatReason(item);
 
   return (
-    <Link
+    <button
+      type="button"
       id={id}
-      to={item.path}
       className={`fi-search-card${active ? " fi-search-card--active" : ""}`}
       role="option"
       aria-selected={active}
-      onClick={onSelect}
+      onClick={() => onSelect?.(item)}
     >
       <span className="fi-search-card__icon" aria-hidden="true">
         {icon}
@@ -50,7 +48,7 @@ function SearchResultCard({ item, active = false, id, onSelect }) {
         <p className="fi-search-card__reason">{reason}</p>
       </div>
       <span className="fi-search-card__open">Open →</span>
-    </Link>
+    </button>
   );
 }
 

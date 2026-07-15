@@ -26,16 +26,14 @@ const REVEAL_SELECTORS = [
   ".fhs-score-card",
   ".fhs-panel",
   ".fhs-suggest-card",
-  ".calc-result-support__card",
-  ".calc-result-support",
+  ".fi-daily-insight",
+  ".fi-rec-panel",
+  ".fi-rec-card",
   ".guide-explore-card",
   ".guide-learning-card",
   ".guide-tool-card",
   ".guide-habit-card",
   ".guide-daily-insight",
-  ".fi-daily-insight",
-  ".fi-rec-panel",
-  ".fi-rec-card",
   ".guide-timeline",
   ".guide-hero__visual",
   ".guide-hero__content",
@@ -57,7 +55,10 @@ function ScrollReveal() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const coarsePointer = window.matchMedia("(hover: none), (pointer: coarse)").matches;
+
+    if (reducedMotion || coarsePointer) {
       return undefined;
     }
 

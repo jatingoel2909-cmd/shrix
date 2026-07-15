@@ -151,8 +151,8 @@
   }
 
   .shrix-nav-search {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
   }
 
   .shrix-brand img {
@@ -162,6 +162,7 @@
 
   .shrix-nav-toggle {
     display: flex;
+    flex-shrink: 0;
   }
 
   .shrix-nav-links {
@@ -200,6 +201,7 @@
 
   .shrix-nav-drawer__links a {
     display: block;
+    min-height: var(--fw-touch-min, 44px);
     padding: 14px 16px;
     border-radius: 14px;
     color: var(--fw-text-primary);
@@ -221,6 +223,7 @@
   .shrix-nav-drawer__search {
     display: block;
     width: 100%;
+    min-height: var(--fw-touch-min, 44px);
     margin-top: 8px;
     padding: 14px 16px;
     border-radius: 14px;
